@@ -1,0 +1,17 @@
+Begin3
+Title:          FDNPKG
+Version:        0.99.6b
+Entered-date:   2017-07-05
+Modified-date:  2017-07-05.1
+Description:    a network-enabled package manager for FreeDOS
+Summary:        FDNPKG is a network-enabled package manager for DOS. FDNPKG is released under the MIT license. It allows to install/remove/update software on a DOS system using either online (http) or local repositories. It is written by Mateusz Viste primarily for the FreeDOS project, but can be used with other DOS systems as well. FDNPKG stands for "FreeDOS Network Package manager".
+Keywords:       fdnpkg, update, packages
+Author:         Mateusz Viste
+Maintained-by:  Mateusz Viste
+Primary-site:
+Alternate-site:
+Original-site:  http://fdnpkg.sourceforge.net/
+Wiki-site:      http://wiki.freedos.org/wiki/index.php/FDNPKG
+Platforms:      DOS
+Copying-policy: MIT License
+End

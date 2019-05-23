@@ -1,0 +1,62 @@
+
+Source:DABBREV.MIN
+Name:U-dabbrev-backwards-only
+If not null, dabbrev only searches backwards.
+[*]
+
+
+Name:U-dabbrev-fold
+If not null, dabbrev will fold case when searching for a
+matching prefix.  The prefix the user typed is not changed.
+The part copied is copied exactly as written in the original.
+No attempt is made to make the case match that of the prefix.
+[*]
+
+
+Name:U:dabbrev
+Dynamically finish the current word.  Check backwards through the
+file to find the last word to start with this pattern of letters, then
+complete the current word the same way.  If there is no previous such
+word, and U-dabbrev-backwards-only isn't null, check forwards.
+[*]
+
+
+Name:Udabbrev
+arg1 = null or #(sp,1) to go backwards or forwards.  Arg2 = [ or ] resp.
+[*]
+
+
+Name:Udabbrev-case-fold
+Given a string in dabbrev-search-string and dabbrev-insert-string, return the
+insert string folded to match the case of the search string.
+  arg1 = ASCII value of char from dabbrev-search-string
+[*]
+Source:DABBREV.MIN
+
+Source:FORTRAN.MIN
+Name:Uforward-skip
+Skip all characters C to the right of point, for which #((arg1),C,Y,N)
+returns Y.
+[*]
+
+Name:Ubackward-skip
+Skip all characters C to the left of point, for which #((arg1),C,Y,N)
+returns Y.
+[*]
+
+Name:Udigitp
+#(Udigitp,C,Y,N) returns Y if C is a digit, N else.
+[*]
+
+Name:Uwhitep
+#(Uwhitep,C,Y,N) returns Y if C is a blank or tab, N else.
+[*]
+
+
+Source:FORTRAN.MIN
+
+Source:user.min
+
+
+
+Source:user.min

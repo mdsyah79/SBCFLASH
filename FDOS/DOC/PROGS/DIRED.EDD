@@ -1,0 +1,116 @@
+
+Source:DIRED.MIN
+
+
+
+Name:D-dired-listing-switches
+Must contain at least -1.
+[*]
+
+
+Name:D:dired
+A Major Mode for file manipulation.  Supports editing, renaming,
+copying and deletion of files in an arbitrary drive:directory.
+[*]
+
+
+Name:D:dired-copy
+Copies the selected file to a specified directory/file
+[*]
+
+
+Name:D:dired-delete
+Marks the specified file for deletion (but does not delete it.)
+[*]
+
+
+Name:D:dired-execute
+Physically deletes all files marked for deletion from the disk and
+updates the DIRED Buffer.
+[*]
+
+
+Name:D:dired-find
+Replaces the DIRED buffer with the selected file
+[*]
+
+
+Name:D:dired-help
+Invokes a single page quick reference for DIRED.
+[*]
+
+
+Name:D:dired-next
+Goes to next line in DIRED Buffer.  Down Arrow also works.
+[*]
+
+
+Name:D:dired-one
+Places the selected file in a full-screen window for editing.
+[*]
+
+
+Name:D:dired-previous
+Goes to previous line in DIRED Buffer.  Up arrow also works.
+[*]
+
+
+Name:D:dired-quit
+Places the selected file in a buffer for editing and kills the DIRED
+Buffer. 
+[*]
+
+
+Name:D:dired-remove
+Unmarks a DIRED line marked for deletion and goes to next line.
+[*]
+
+
+Name:D:dired-rename
+Renames the selected file.
+[*]
+
+
+Name:D:dired-two
+Places the selected file in a second window for editing.
+[*]
+
+
+Name:D:dired-view
+Places the selected file in a second window for viewing.
+Leaves the user in the DIRED Buffer.
+[*]
+
+
+Name:D:revert-dired
+Refreshes the DIRED buffer with the current directory contents.
+[*]
+
+Name:Ddired
+complete-filename
+Returns the complete filename for the line that the cursor is on.
+[*]
+
+
+Name:Ddired-execute-do
+Handles doing something on every marked line.  Execute arg1 with an
+argument of the filename.
+[*]
+
+
+Name:Ddired-filename
+Extracts the filename.ext from the current line.  If arg1 is empty,
+then simply return the filename.  Otherwise run arg1 if there
+is a filename on the line (with the filename as an argument).
+Otherwise if arg2 is nonempty, run it. Otherwise Fring-the-bell.  If
+arg3 is nonempty, use the local form of the name.
+[*]
+
+
+Name:Dmore
+Same as Fmore, but doesn't run Fhit-any-key.
+[*]
+
+
+
+Source:DIRED.MIN

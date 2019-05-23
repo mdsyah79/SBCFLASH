@@ -1,0 +1,21 @@
+#
+# GENERATED FILE. DO NOT EDIT!
+#
+# DHCP transient configuration; values that must
+# be known between consecutive runs of applications.
+# Version: Watt-32 (2.2.10), GNU-C 3.4.4 (386), djgpp 2.03, Dec 12 2013
+#
+# This file saved at Sat Feb  9 21:10:17 2019
+#
+DHCP.LEASE    = 1552392125           # lease expires at  Sat Feb 23 21:15:17 2019
+DHCP.RENEW    = 1551787175           # renew expires at  Sat Feb 16 21:12:47 2019
+DHCP.REBIND   = 1552240887           # rebind expires at Fri Feb 22 03:14:39 2019
+DHCP.MY_IP    = 10.34.86.152         # assigned ip-address
+DHCP.NETMASK  = 255.255.248.0        # assigned netmask
+DHCP.GATEWAY  = 10.34.80.1           # assigned gateway
+DHCP.NAMESERV = 10.34.180.254        # assigned nameserver
+DHCP.SERVER   = 10.3.81.254          # DHCP server
+DHCP.HOSTNAME = random-pc            # assigned hostname
+DHCP.DOMAIN   = woo.sing.seagate.com # assigned domain
+DHCP.DEF_TTL  = 254                  # default TTL
+DHCP.TCP_KEEP = 30                   # TCP keepalive interval

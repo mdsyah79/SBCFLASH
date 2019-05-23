@@ -1,0 +1,168 @@
+
+Source:FORTRAN.MIN
+Name:N!Fortran-mode
+Meaty part of F:Fortran-mode.
+[*]
+
+-------------------------------------------------------------------------------
+give help:
+-------------------------------------------------------------------------------
+
+Name:N:fortran-help
+Give some help.
+[*]
+
+Name:N:fortran-version
+Echo the current RCS Header of the mint file.
+[*]
+
+-------------------------------------------------------------------------------
+tabbing etc.:
+-------------------------------------------------------------------------------
+
+Name:N:fortran-indent-line
+Indent properly for fortran.  (If not on a comment line)
+[*]
+
+Name:N:fortran-new-line
+Newline and indent properly for fortran.
+[*]
+
+Name:Nline-head
+Returns the beginning of the current line.
+[*]
+
+Name:N:fortran-split-line
+Force splitting of current line at point, taking care of continuation.
+[*]
+
+Name:N:split-space
+Supports fortran continuation and comment lines (and only those)
+[*]
+
+Name:N:newline
+Insert a newline.
+[*]
+
+-------------------------------------------------------------------------------
+dynamical abbreviation:
+-------------------------------------------------------------------------------
+
+Name:N:fortran-close-block
+If there is an DO (resp. IF) on the current line, place the corresponding
+CONTINUE (resp. ELSE ENDIF) with the right indentation two lines below.
+Write label (resp. THEN). Cases are folded automatically.
+[*]
+
+-------------------------------------------------------------------------------
+'subroutines':
+-------------------------------------------------------------------------------
+
+Name:Npull-mark-regex
+#(Npull-mark-regex,RE,S,E,Y,N)
+Search for regular expression RE (case insensitive) between
+S and E. If successful, set E to the beginning of the
+matching string, and return Y; else return N.
+[*]
+[*]
+
+Name:Nindentation
+Returns the current indentation, according to nested DO-loops or
+IF-blocks. Works only if each DO-loop is ended by a CONTINUE
+(which is anyway good fortran style). Knows about the 7th column.
+-----------------------------------------------------------------
+Although this routine is faster than my first trials, it is
+still to slow for non-16-Mhz PCs. Somebody could find a
+way without regular expressions ...
+[*]
+
+Name:Nset-indent
+Determines the case of the character under the point,
+writes the current indentation to #(N-white), and aligns
+the opening line of the structure.
+Assumes to sit on the first letter of the DO of IF.
+[*]
+
+Name:Nfold
+Return arg1 (folded according to #(N-case)).
+[*]
+
+Name:Nalign
+Insert arg1 (folded according to #(N-case)), indented by #(N-white), then
+move up one line and indent by #(N-white) + arg2.
+[*]
+
+Name:Nwrite-label
+Inserts arg1 like labels in Fortran should look.
+(assumes .=^).
+[*]
+
+-------------------------------------------------------------------------------
+Digitally remastered GNU emacs:
+-------------------------------------------------------------------------------
+
+Name:N:beginning-of-fortran-subprogram
+Moves point to the beginning of the current fortran subprogram.
+[*]
+
+Name:N:end-of-fortran-subprogram
+Moves point to the end of the current fortran subprogram.
+[*]
+
+Name:N:mark-fortran-subprogram
+Put mark at end of fortran subprogram, point at beginning.
+The marks are pushed.
+[*]
+
+Name:N-fortran-column-ruler
+Used by fortran-column-ruler.
+[*]
+
+Name:N:fortran-column-ruler
+Inserts a column ruler momentarily above current line, till next keystroke.
+The ruler is defined by the value of N-fortran-column-ruler.
+The key typed is executed unless it is SPC.
+[*]
+
+
+Name:Nexpand-fortran-abbrev
+Expand the non-white characters to the left of point, if they begin with
+#(N-fortran-abbrev-char), which is usually `;', from GNU Emacs.
+Insert the result.
+[*]
+
+Name:Nexpand-fortran-abbrev-do
+Expand arg1 properly case folded as fortran abbrev
+[*]
+
+Name:N:question-mark
+Insert a question mark or give help about abbrevs.
+[*]
+
+Name:N:list-fortran-abbrevs
+Display the list of currently defined abbrevs.
+[*]
+
+Name:Nscan-fortran-abbrevs
+Recursively scan the list of abbrevs and format them for #(Fmore).
+[*]
+
+-------------------------------------------------------------------------------
+electric line numbers.
+-------------------------------------------------------------------------------
+
+Name:N:fortran-electric-line-number
+Inspired by GNU Emacs.
+[*]
+
+Name:Nfortran-line-numberp
+#(Nfortran-line-numberp,Y,N) returns `Y' if point is on (or just behind) a
+Fortran line number, else `N' is returned.
+[*]
+
+----------------------------------------------------------------------
+point moving functions for the common user library:
+----------------------------------------------------------------------
+
+
+Source:FORTRAN.MIN

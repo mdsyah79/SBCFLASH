@@ -1,0 +1,2726 @@
+
+Source:ABBREV.MIN
+
+
+
+Source:ABBREV.MIN
+
+Source:C.MIN
+
+Source:C.MIN
+
+Source:DIRED.MIN
+
+
+
+Name:F:Dired-mode
+This will set the local mode to Dired.  The code is contained in the
+D library.
+[*]
+
+
+
+Source:DIRED.MIN
+
+Source:FORTRAN.MIN
+
+Source:FORTRAN.MIN
+
+Source:GREP.MIN
+
+Source:GREP.MIN
+
+Source:INFO.MIN
+
+Source:INFO.MIN
+
+Source:LISP.MIN
+
+Source:LISP.MIN
+
+Source:RMAIL.MIN
+
+Source:RMAIL.MIN
+
+Source:_windows.min
+
+
+
+Name:F:compare-windows
+Compare the two windows on a line by line basis.
+[*]
+
+
+Name:F:delete-other-windows
+Remove all the other windows from the screen.
+[*]
+
+
+Name:F:delete-window
+Remove the current window from the screen.
+[*]
+
+
+Name:F:enlarge-window
+Make the current window larger.
+[*]
+
+
+Name:F:other-window
+Switch to the buffer shown in the other window.
+[*]
+
+
+Name:F:shrink-window
+Make the current window smaller.
+[*]
+
+
+Name:F:split-window-vertically
+Split the screen into two windows, moving point to the bottom window
+[*]
+Source:_windows.min
+
+Source:_variabl.min
+
+
+
+Name:F-auto-paren-color
+Color that the matching parenthesis is set to when running auto-match-paren.
+[*]
+
+
+Name:F-auto-save
+If set to a non-zero value (N), then every N keystrokes, the function
+Fauto-save will be executed.  This function will save every modified buffer
+in an auto-save file.
+[*]
+
+
+Name:F-back-color
+Text background color.
+[*]
+
+
+Name:F-bell-pitch
+Default pitch of the bell when no argument or zero is handed to #(bl).  If
+negative, then a visible bell is used instead.  A visible bell is performed
+by inverting the screen.
+[*]
+
+
+Name:F-bottom-percent
+Freemacs will attempt to scroll the window if the cursor is positioned within
+this percentage of the bottom of the window.
+[*]
+
+
+Name:F-case-fold-search
+If this variable is non-null, then case is ignored when searching.
+[*]
+
+
+Name:F-case-replace
+Non-null if we wish to fold case upon replacement.
+[*]
+
+
+Name:F-comment-column
+The column that comments should be aligned to.
+[*]
+
+
+Name:F-completion-ignored-extensions
+Comma separated and space terminated list of extensions.
+[*]
+
+
+Name:F-control-color
+Color of control characters
+[*]
+
+
+Name:F-default-ext
+The default extension if none is given, i.e. there is no dot in the specified
+filename.  A null extension may be specified by appending a dot to a filename.
+[*]
+
+
+Name:F-delete-or-append
+If this variable is null, then the offered value when reading a line from the
+keyboard will be appended to by the first keypress.  If it is non-null, then
+the first keypress will delete the offered value.
+[*]
+
+
+Name:F-edit-history
+Should be 'yes' or 'no'.  Controls whether the user is prompted for a change
+notice.  Only has effect if a line with 'History:' is in the first three lines.
+[*]
+
+
+Name:F-ext-mode-list
+List of pairs of strings.  First string is the extension, and the second
+string is the name of the major mode to edit the file.
+[*]
+
+
+Name:F-fill-column
+The column used by #(Ffill-paragraph)
+[*]
+
+
+Name:F-fore-color
+Text foreground color
+[*]
+
+
+Name:F-inhibit-snow
+Some display adapters (most notably IBM's CGA) will produce snow if the CPU
+writes at the same time the screen reads.  This can be avoided at a fairly
+high cost by waiting for retrace periods.  Setting this variable to a non-zero
+value will inhibit snow.
+[*]
+
+
+Name:F-libs-to-load
+Libraries to load in addition to emacs.
+keys is required.  Terminate each name with a comma.
+[*]
+
+
+Name:F-make-backups
+If non-null, make backup files.
+[*]
+
+
+Name:F-mode-back-color
+Mode line background color
+[*]
+
+
+Name:F-mode-fore-color
+Mode line foreground color
+[*]
+
+
+Name:F-paragraph-separate
+Regular expression describing all the characters that seperate paragraphs.  See
+mintref.doc under #(lp)
+[*]
+
+
+Name:F-paragraph-separator
+[wjm 4/7/90]
+The space between paragraphs is marked by a line starting with either 
+(1) ##(fill-prefix)##(F-paragraph-separate) or 
+(2) with ##(F-paragraph-separate) 
+[*]
+
+
+Name:F-paragraph-start
+[wjm 4/7/90]
+The start of a paragraph is marked by either 
+(1) a line starting with ##(fill-prefix)##(F-paragraph-start), or 
+(2) a line not starting with ##(fill-prefix).
+[*]
+
+
+Name:F-readline-color
+Readline foreground color
+[*]
+
+
+Name:F-search-delete-char
+Character to delete from incremental search string (normally Back Space,
+C-h, or Del).
+[*]
+
+
+Name:F-search-exit-char
+Character to exit incremental search (normally Escape or C-[).
+[*]
+
+
+Name:F-search-quote-char
+Character to quote special characters for incremental search (normally C-q).
+[*]
+
+
+Name:F-search-repeat-char
+Character to repeat incremental search forwards (normally C-s).
+[*]
+
+
+Name:F-search-reverse-char
+Character to repeat incremental search backwards (normally C-r).
+[*]
+
+
+Name:F-search-yank-line-char
+Character to pull rest of line from buffer into search string (normally C-y).
+[*]
+
+
+Name:F-search-yank-word-char
+Character to pull next word from buffer into search string (normally C-w).
+[*]
+
+
+Name:F-swap-directory
+If non-null, Freemacs will swap to a disk file in the named directory when
+executing an external program.
+[*]
+
+
+Name:F-tab-columns
+	Each tab character advances the cursor to the next tab stop.  Each tab
+stop is #(lv,tc) characters apart.
+[*]
+
+
+Name:F-tab-stop-list
+Comma-terminated list of tab stops
+[*]
+
+
+Name:F-top-percent
+Freemacs will attempt to scroll the window if the cursor is positioned within
+this percentage of the top of the window.
+[*]
+
+
+Name:F-visible-whitespace
+Set to one if you want trailing whitespace (spaces and tabs) to be visible.
+Set to zero if you want it to be invisible.  Freemacs was designed to
+take nothing for granted and assume that the user really wants to see
+everything that's in their file.  However, people have expressed a desire to
+be ignorant of the presence of trailing whitespace, hence this option.
+[*]
+
+
+Name:F-whitespace
+	A list of all whitespace: duplicated from my file parfix.min.
+In case it doesn't make it through the mail, it should start with a
+newline, and contain a space, a tab, another newline, and a ^L.
+[*]
+
+
+Name:Flocal-bind-vars
+Define a local variable, remembering it for later restoral.  Enter with
+arg1 = buffer-vars.number.name, so we strip off the prefix, and present
+it to local-bind-key.
+[*]
+
+
+Name:Fset-variables
+Set the assembly language variables to those found in the MINT variables
+[*]
+Source:_variabl.min
+
+Source:_utils.min
+
+
+
+Name:Fall-but-last
+Return all but the last argument concatenated together.
+[*]
+
+
+Name:Fand
+If arg1 returns yes and arg2 returns yes, return arg3 else arg4.
+[*]
+
+
+Name:Fexecute-and-mark
+Evaluates arg1 and creates a mark around anything it may have put in the text
+buffer.
+[*]
+
+
+Name:Ffind-a-string
+Find all the strings that match arg1.
+[*]
+
+
+Name:Ffirst
+Given a list of arguments, return only the first.
+[*]
+
+
+Name:Fflush-input-buffer
+Ring the bell and wait one second for the user to stop typing.  Used to prevent
+the user from typing ahead when he has already made a mistake.  The first time
+give them 250 ms to react.
+[*]
+
+
+Name:Ffourth
+Return the fourth argument.
+[*]
+
+
+Name:Fhead
+Return the string that is the head of the ring specified by arg1.
+[*]
+
+
+Name:Fisupper
+#(Fisupper,CHAR,YES,NO) tests the ASCII value of char and executes YES
+if the character is an upper case letter or NO if not.
+[*]
+
+
+Name:Fleave
+Used by redefine and unredefine to position the string pointer.
+[*]
+
+
+Name:Flist-all-strings
+List all strings beginning with arg1 in all libraries.
+[*]
+
+
+Name:Flongest-prefix
+Find the longest common prefix in the comma-terminated list of strings given in
+arg1.  Ignore arg2 characters at the beginning of each string.  Define the
+string "longest-matched" if one of the strings is equal to the prefix.
+Tests:
+#(Flongest-prefix,(abc,abc,))##(temp) should be abc#(n?,longest-matched, and longest matched)
+#(Flongest-prefix,(abc,abd,))##(temp) should be ab#(n?,longest-matched, and longest matched)
+#(Flongest-prefix,(abc,ab,))##(temp) should be ab#(n?,longest-matched, and longest matched)
+End of tests.
+[*]
+
+
+Name:Flongest-prefix-do
+Find the longest common prefix in arg2 and ##(temp).  Ignore arg1 characters
+at the beginning of each string.
+Tests:
+#(es,longest-matched)#(ds,temp,abcd)#(Flongest-prefix-do,,abc)##(gs,temp) should be abc#(n?,longest-matched, and longest matched)
+#(es,longest-matched)#(ds,temp,abc)#(Flongest-prefix-do,,abcd)##(gs,temp) should be abc#(n?,longest-matched, and longest matched)
+#(es,longest-matched)#(ds,temp,abc)#(Flongest-prefix-do,,abc)##(gs,temp) should be abc#(n?,longest-matched, and longest matched)
+End of tests.
+[*]
+
+
+Name:Flongest-prefix-do-do
+Compare the prefix and the new candidate, character by character.  If this one
+matches exactly, define longest-matched.  If this one made the prefix shorter,
+undefine longest-matched.
+Tests:
+#(es,longest-matched)#(ds,temp,)#(ds,temp1,)#(Flongest-prefix-do-do,a,b) should be #(n?,longest-matched, and longest matched)
+#(es,longest-matched)#(ds,temp,)#(ds,temp1,)#(Flongest-prefix-do-do,b,a) should be #(n?,longest-matched, and longest matched)
+#(es,longest-matched)#(ds,temp,)#(ds,temp1,)#(Flongest-prefix-do-do,a,a) should be a#(n?,longest-matched, and longest matched)
+#(es,longest-matched)#(ds,temp,b)#(ds,temp1,b)#(Flongest-prefix-do-do,a,a) should be ab#(n?,longest-matched, and longest matched)
+#(es,longest-matched)#(ds,temp,a)#(ds,temp1,b)#(Flongest-prefix-do-do,a,a) should be a#(n?,longest-matched, and longest matched)
+#(es,longest-matched)#(ds,temp,a)#(ds,temp1,)#(Flongest-prefix-do-do,a,a) should be a#(n?,longest-matched, and longest matched)
+#(es,longest-matched)#(ds,temp,)#(ds,temp1,a)#(Flongest-prefix-do-do,a,a) should be a#(n?,longest-matched, and longest matched)
+[*]
+
+
+Name:Flooking-at
+Args:(regexp,if-yes,if-no)
+[wjm 4/7/90]
+	Return <if-yes> if the string after point matches <regexp>, else 
+return <if-no>.  Mark 0 is the initial point, and mark 2 is the end of the
+match.
+[*]
+
+
+Name:Flookup
+Search through the string named in arg1 for arg2 (callers
+responsibility to ensure that the match is complete), and execute
+everything up to the next arg3.  If there is no arg2 in the list,
+execute arg4.
+[*]
+
+
+Name:Floop
+Return arg2 copies of arg1, active
+[*]
+
+
+Name:Fmax
+#(Fmax,A,B) returns the numerically greater of A and B.
+[*]
+
+
+Name:Fmodulus
+#(Fmodulus,ARG) Returns ARG if ARG is positive,
+else -ARG if ARG is negative (special cases: 1 for void and `-').
+[*]
+
+
+Name:Fmore
+Given a list of items, show them on the screen, one per line, pausing every
+#(lv,b) lines to let the user press a key.  If they quit in the middle, force
+a redisplay because that's what #(Fhit-any-key) does
+[*]
+
+
+Name:Fmultiple
+#(Fmultiple,STRING,LIST,LISTNAME) will execute #(STRING,LIST ELEMENT) where LIST
+consists of LIST ELEMENTS seperated by commas.  Note that LIST can not be
+scanned, otherwise the commas will be converted to argument seperators.  Use
+parentheses to protect LIST, or use a neutral function to return its results
+unscanned.
+	Fmultiple can be used recursively if you specify different
+LISTNAMES for each list.  #(Fmultiple,foo,bar,SELF) works nicely.
+
+[*]
+
+
+Name:Fmv
+Rename a function definition to another name.
+[*]
+
+
+Name:For
+If arg1 returns yes or arg2 returns yes, return arg3 else arg4.
+[*]
+
+
+Name:Fpad-to-column
+#(Fpad-to-column,COL) will insert enough spaces into the line to
+put the point at the given column.
+[*]
+
+
+Name:Fpad-with
+Pad a string arg2 with arg1 on the left and arg3 on the right until it is
+arg4 long.
+[*]
+
+
+Name:Fparens
+Surround arg1 with parens.
+[*]
+
+
+Name:Fprefix-matches
+If arg1 matches arg3 starting at the third character, and the string whose
+name starts at the second character doesn't exist, return arg3 starting
+at the arg2th character.
+[*]
+
+
+Name:Fr
+Make arg1 into a string, and substitute parameters arg2 for ARG1, arg3 for ARG2,
+etc...  Obviously this is a kludge that will only work to one level, but it's
+very handy.
+[*]
+
+
+Name:Fredefine
+Redefine the string arg1 so that it appears to contain only arg2.
+[*]
+
+
+Name:Fregexp-quote
+Quote an ordinary string so that any metacharacters will be interpreted as
+ordinary characters.
+#(Fregexp-quote,^$.*[]\)
+[*]
+
+
+Name:Fresolve-name
+Given a string name in arg1, make sure that it is non-ambiguous and execute arg2
+if it is.  If arg3 is non-null, use it as the prefix character.
+[*]
+
+
+Name:Fright
+Return the rightmost arg2 characters of arg1.
+[*]
+
+
+Name:Frun-some-functions
+Run functions given in the args until one of them fails to return "again".
+[*]
+
+
+Name:Fsecond
+Return the second argument.
+[*]
+
+
+Name:Fsignum
+#(Fsignum,ARG,PLUS,MINUS) Returns PLUS if ARG is positive or void,
+else MINUS if ARG is negative or `-'.
+[*]
+
+
+Name:Fskip-chars-forward
+Args:(class,end)
+Skips past all characters in the given character class.  If end is non-null,
+then it is the mark to stop searching.  Otherwise the search stops at the
+end of the buffer.
+[*]
+
+
+Name:Ftail
+Return the rest of the arguments.
+[*]
+
+
+Name:Fthird
+Return the third argument.
+[*]
+
+
+Name:Funredefine
+Undo the effects of the previous redefine.
+[*]
+
+
+Name:Funrotate
+Back up a ring.
+[*]
+
+
+Name:Fwhile-yes
+Repeatedly execute arg1 so long as it returns 'yes'.
+[*]
+
+
+Name:Fwhitespace
+Return arg1 if the character to the right is space, tab, or newline else arg2.
+If arg3 is non-null, don't match newline.
+[*]
+
+
+Name:Fyes-or-no
+#(Fyes-or-no,PROMPT,YES,NO) will read a line and execute YES if
+that line is 'yes'.  It will execute NO if the line is 'no'.
+It keeps trying until a recognized word is entered.
+[*]
+Source:_utils.min
+
+Source:_unclass.min
+
+
+
+Name:F:backward-list
+Move backward over matched ()'s
+[*]
+
+
+Name:F:center-line
+Center text based on F-fill-column.
+[*]
+
+
+Name:F:count-lines-page
+Count the number of lines on this page.
+[*]
+
+
+Name:F:count-lines-region
+Report the number of lines in the region.
+[*]
+
+
+Name:F:edit-tab-stops
+Create a buffer in other window to edit the tabstop list.
+[*]
+
+
+Name:F:execute-extended-command
+Read an extended command from the keyboard.
+[*]
+
+
+Name:F:forward-list
+Move forward over matched ()'s
+[*]
+
+
+Name:F:newline
+[wjm 4/12/90] Modified so that it breaks the current line if it is too
+	long in fill mode.
+[*]
+
+
+Name:F:newline-and-indent
+Insert a newline followed by the same whitespace as on the previous line.
+[*]
+
+
+Name:F:recenter
+Reposition the line containing the cursor at the middle of the window.  If
+an argument is given, place the cursor at that line.
+Changed to make M-0 C-L do the same thing a GNU emacs.
+[*]
+
+
+Name:F:set-comment-column
+Set the comment column or delete a comment.
+[*]
+
+
+Name:F:set-fill-column
+Set the fill column to the argument if one is given, or else use the current
+cursor position.
+[*]
+
+
+Name:F:set-fill-prefix
+Set the fill prefix to everything at the beginning of the line.
+[*]
+
+
+Name:F:set-mark-command
+Modified by Ashok P. Nadkarni
+Set a mark at point if argument is null.  If a non-negative argument is
+given, pop the mark ring. If negative argument go to next mark.
+[*]
+
+
+Name:F:set-visited-filename
+Set the name of the current buffer.
+[*]
+
+
+Name:F:shell-command
+Execute a shell command and insert its output into a buffer.  If given a
+non-null argument, insert the output into the current buffer.
+[*]
+
+
+Name:F:shell-command-on-region
+Execute a shell command with the region as input.
+[*]
+
+
+Name:F:spell-word
+Spell check the word to the left of point.  If an argument is given and
+the word is mis-spelled, ring the bell.
+[*]
+
+
+Name:F:split-space
+[wjm 4/12/90] old F:split-space modified to be usable with F:newline
+as well.
+[*]
+
+
+Name:F:suspend-emacs
+Execute the program given in EMACS_SHELL if it exists, otherwise command.com.
+[*]
+
+
+Name:F:try-it
+Bring the current line of text in and execute it.
+[*]
+
+
+Name:F:what-cursor-position
+GNU EMACS style point-position and statistics
+[*]
+
+
+Name:F:where-is
+Called by Fhelp.w.  Given a command name in ##(temp) it finds the
+keys bound to it.
+[*]
+
+
+Name:F:word-count
+Return a count of words in the buffer.
+[*]
+
+
+Name:Fbreak
+Check for a user break (C-g).  If there is one, clear the input buffer,
+and abort any keyboard macro in progress, and return arg1.  Otherwise,
+return arg2.
+[*]
+
+
+Name:Fbuffer-char-count
+Get the character length of the buffer.
+(signed 16-bit ints, so goes negative if #chars > 32767)
+
+[*]
+
+
+Name:Fcorners
+Call this with point, mark set to the other corner.
+[*]
+
+
+Name:Fcorners-sort
+Call this with arg1,arg2 = line,column of point, arg3,arg4 = line,column
+of mark, return arg1 = top, arg2 = left, arg3 = bot, arg4 = right.
+[*]
+
+
+Name:Fkill-emacs
+If there are no unsaved buffers, exits to dos.  If there are any unsaved
+buffers, and the user really wants to quit, exits to dos.  Otherwise it
+returns to the buffer number given in arg1.
+[*]
+
+
+Name:Fmaybe-write-abbrevs
+Write a file describing all defined abbrevs, but only if they've been changed.
+Return arg1 if we weren't C-g'ed.
+[*]
+
+
+Name:Fmodify-syntax
+arg1 is the name of the syntax table,
+arg2 is the ASCII value of the char to change,
+arg3 is the new value of the entry.
+Test code:
+	#(ds,syntax,##(Fsyntax))
+	#(Fmodify-syntax,syntax,48,10)
+	#(is,##(syntax))#(Fcrlf)
+[*]
+
+
+Name:Fnewline-and-indent-do
+Skip right past spaces and tabs.
+[*]
+
+
+Name:Fsyntax
+This is the default syntax table.  Includes [0-9_A-Za-z].
+[*]
+
+
+Name:Fvip-match-paren
+Find the paren that matches the one we're pointing to right now, and
+return 'yes' if it matches, and 'no' if it we're not on a paren.
+[*]
+Source:_unclass.min
+
+Source:_transpo.min
+
+
+
+Name:F:transpose-chars
+Transpose the character before point with the character after point,
+respecting a numerical argument.
+[*]
+
+
+Name:F:transpose-lines
+Transpose the current line with the next line,
+respecting a numerical argument.
+[*]
+
+
+Name:F:transpose-words
+Transpose the current word with the next word,
+respecting a numerical argument.
+[*]
+
+
+Name:Ftranspose-chars.backward
+Transpose the character before point with the character before it.
+[*]
+
+
+Name:Ftranspose-chars.forward
+Transpose the character before point with the character after point.
+[*]
+
+
+Name:Ftranspose-chars.mark
+Transpose the character before point with the character before mark.
+BUG: mark is moved.
+[*]
+
+
+Name:Ftranspose-lines.backward
+Transpose the current line with the previous line.
+[*]
+
+
+Name:Ftranspose-lines.forward
+Transpose the current line with the next line.
+[*]
+
+
+Name:Ftranspose-lines.mark
+Transpose the current line with the one containing mark.
+[*]
+
+
+Name:Ftranspose-words.backward
+Transpose the current word with the previous word.
+[*]
+
+
+Name:Ftranspose-words.forward
+Transpose the current word with the next word.
+[*]
+
+
+Name:Ftranspose-words.mark
+Transpose the current word with the one containing mark.
+[*]
+Source:_transpo.min
+
+Source:_startup.min
+
+
+
+Name:F&setup
+Executed immediately after the fundamental library is loaded.
+*** Be *very* careful editing this.  If you break it, you can end up with an
+unusable emacs.ed file, because keys.ed gets loaded fairly late in the process,
+and if keys.ed doesn't get loaded, you can't do any editing.  You can recover
+using #(M:compare-ed), or else you can restore emacs.ed from emacs.tmp.
+[*]
+
+
+Name:F:quoted-insert
+Insert a control character.
+[*]
+
+
+Name:F:ring-the-bell
+Ring the bell.
+[*]
+
+
+Name:Fcmd
+This is used to define the string #(d), which executes keys.
+[*]
+
+
+Name:Fcreate-buffer-one
+Set up buffer one.  This is only done once in F&setup.
+[*]
+
+
+Name:Fcreate-buffer-one-do
+Enter with arg1 = first mark to set.  Exit when arg1 == arg2.
+Return the list of all args.
+[*]
+
+
+Name:Fcrlf
+Insert a newline into the buffer.
+[*]
+
+
+Name:Ffilename
+This is the filename that we store the fundamental library in.
+[*]
+
+
+Name:Fparse-cmdline
+	Read command line arguments. This function should be called
+>from F&setup, replacing the four lines that currently deal with
+reading filenames from the commandline.
+
+   (written wjm 3/13)
+
+	This allows the following options on the command line
+	<filename>	loads a file.
+	+nnn <filename>	loads a file, then moves to line nnn in that file.
+	-f <command>	run the command <command>
+
+Test:
+#(ds,env.RUNLINE,( ab	c -f newline))#(Fparse-cmdline)
+#(ds,env.RUNLINE,( -f newline))#(Fparse-cmdline)
+[*]
+
+
+Name:Fparse-cmdline-do
+	[wjm 3/13/90]
+	[4/1/90] - used new functionbreak-first, fixed bug in -f case.
+[*]
+
+
+Name:Fredisplay
+This is the prototype for #(k).
+[*]
+
+
+Name:Fredisplay-two
+This is the prototype for #(k) when in two window mode.
+[*]
+
+
+Name:Fsearch-path
+Search the path for an executable program named in arg1.
+[*]
+
+
+Name:Fself-insert
+Insert a single character.
+[*]
+Source:_startup.min
+
+Source:_searche.min
+
+
+
+Name:F:flash-rbrace
+Move the cursor back to the matching }
+[*]
+
+
+Name:F:flash-rbracket
+Move the cursor back to the matching ]
+[*]
+
+
+Name:F:flash-rpar
+Move the cursor back to the matching )
+[*]
+
+
+Name:F:isearch-backward
+Incrementally search backwards.  Use C-s to search forwards again and C-r to
+search backwards again.
+[*]
+
+
+Name:F:isearch-forward
+Incrementally search forwards.  Use C-s to search forwards again and C-r to
+search backwards again.
+[*]
+
+
+Name:F:isearch-forward-regexp
+Incrementally search forwards using a regexp.  Use C-s to search forwards
+again and C-r to search backwards again.
+[*]
+
+
+Name:F:query-replace
+Search for a string and give the user a chance to replace it with another.
+[*]
+
+
+Name:F:replace-regexp
+Replace all strings matching a given regexp with another string.
+[*]
+
+
+Name:F:replace-string
+Replace all strings matching a given string with another string.
+[*]
+
+
+Name:F:search-forward
+Prompts for search string, after first offering use of string from
+last search.  Point is set to just beyond the end of the found string.
+
+[*]
+
+
+Name:F:vip-match-paren
+Find the paren that matches the one we're pointing to right now.
+[*]
+
+
+Name:Fbackward-find-paren
+Look for the closest previous arg2 or arg3.  If we found an arg2 between
+point and arg1, see if we're done matching, otherwise keep searching.
+[*]
+
+
+Name:Fbackward-find-paren-do
+Look for the closest previous arg2 or arg3.  If we found an arg2 between
+point and mark 3, see if we're done matching, otherwise keep searching.
+[*]
+
+
+Name:Ffind-a-match
+Given a comma-terminated list of strings,
+  return arg2 if there are none of them,
+  return arg3 if there is one of them,
+  return arg4 if there are multiple (and set ##(temp) to the
+    longest common prefix).
+  Ignore arg5 characters at the beginning of each string.
+[*]
+
+
+Name:Fflash-paren
+Search backwards for the previous matching arg1 that matches arg2.  Only
+search as far as the preceding double blank line.
+By the way, #(Fflash-paren,begin,end) works just fine, but #(Fflash-paren,",")
+doesn't.  I suppose that if you alternately searched for 'left' then 'right',
+you might have *some* success, but who knows.
+[*]
+
+
+Name:Fflash-paren-do
+Skip backwards over pairs of delimiters.  arg2 is the opening
+delimiter, and arg3 is the closing delimiter.  arg1 is the count of open
+delimiters.
+[*]
+
+
+Name:Fforward-find-paren
+Look for the closest previous arg2 or arg3.  If we found an arg2 between
+point and arg1, see if we're done matching, otherwise keep searching.
+[*]
+
+
+Name:Fforward-find-paren-do
+Look for the closest previous arg2 or arg3.  If we found an arg2 between
+point and mark 3, see if we're done matching, otherwise keep searching.
+[*]
+
+
+Name:Fisearch
+Incrementally search.  Use arg1 as the initial direction (null==forward).
+If arg2 is non-null, use regular expressions.
+We use mark 0 as the original match location, mark 3 as the last succeeding
+match location.
+[*]
+
+
+Name:Fisearch-do
+Decide what key to execute during incremental search.
+[*]
+
+
+Name:Fisearch-do-do
+Decide what key to execute during incremental search.
+[*]
+
+
+Name:Fisearch-do-search
+Search backward during incremental search.
+[*]
+
+
+Name:Fisearch-do-search-backward
+Search backward during incremental search.
+[*]
+
+
+Name:Fisearch-do-search-forward
+Search forward during incremental search.
+[*]
+
+
+Name:Fisearch.C-g
+Handle C-g during incremental search.  If we found a match, just kill the
+input.  If we haven't found a match, kill what we didn't match.
+[*]
+
+
+Name:Fisearch.C-y
+Read the rest of the line out of the text buffer.
+[*]
+
+
+Name:Fisearch.Escape
+Process search-exit-char.
+[*]
+
+
+Name:Fisearch.direction
+Arg1 is non-null if this is the first character after entering isearch mode.
+Arg4 is the direction to bump the count.
+[*]
+
+
+Name:Fsearch-forward
+Search forward for the string given in arg1.  Return arg2 if found,
+arg3 if not found.  If found, move point to just beyond the end of the
+found string.  If arg4 is non-null, interpret arg1 as containing
+regexps.  If arg5 is non-null, interpret arg1 as to ignore case.  By
+convention, arg4 should be R or null, arg5 should be C or null.
+
+[*]
+Source:_searche.min
+
+Source:_registe.min
+
+
+
+Name:F:insert-register
+Also handle rectangles [tho].
+[*]
+
+
+Name:Ffree-register
+Free up any resources required by a register other than its contents.
+Enter with the arguments set to the contents of the mark.
+[*]
+
+
+Name:Fget-register
+Called with
+arg1 = prompt
+arg2 = code to execute using Fr with ARG1 = the register.
+#(Fget-register,Register,(#(an,Register ARG1)))
+[*]
+Source:_registe.min
+
+Source:_rectang.min
+
+
+
+Name:F:clear-rectangle
+Blank the rectangle spanned by point and mark.
+[*]
+
+
+Name:F:delete-rectangle
+Delete the rectangle spanned by point and mark.
+[*]
+
+
+Name:F:kill-rectangle
+Kill the rectangle spanned by point and mark.
+(can be yanked with M-x yank-rectangle)
+[*]
+
+
+Name:F:open-rectangle
+Insert a blank rectangle into the one spanned by point and mark.
+[*]
+
+
+Name:F:yank-rectangle
+Insert the previously killed rectangle.
+[*]
+
+
+Name:Fclear-rectangle-do
+Called with arg1 = top, arg2 = left, arg3 = bot, arg4 = right.
+[*]
+
+
+Name:Fcopy-region-to-rectangle-do
+arg1 = top
+arg2 = left
+arg3 = bot
+arg4 = right
+arg5 = (decimal) Mark in buffer one: write rectangle here.
+[*]
+
+
+Name:Fcopy-region-to-rectangle-do-do
+arg1 = (decimal) Mark in buffer one: append the next line
+       (point to mark 0) here.
+arg2 = # blanks to pad at end of line.
+##(old-buffer) contains the number of the buffer we're reading from.
+[*]
+
+
+Name:Fdelete-rectangle-do
+Called with arg1 = top, arg2 = left, arg3 = bot, arg4 = right.
+[*]
+
+
+Name:Finsert-rectangle
+arg1 = (ascii) mark in buffer one: start of region to restore as rectangle
+arg2 = left column
+[*]
+
+
+Name:Finsert-rectangle-do
+arg1 = (ascii) mark in buffer one: end of region to restore as rectangle.
+arg2 = left column
+##(old-buffer) contains the number of the buffer we're writing to.
+[*]
+
+
+Name:Fkill-rectangle
+Call this with arg1,arg2 = line,column of point, arg3,arg4 = line,column of mark.
+Call SELF-do with arg1 = top, arg2 = left, arg3 = bot, arg4 = right.
+[*]
+
+
+Name:Fkill-rectangle-do
+Called with arg1 = top, arg2 = left, arg3 = bot, arg4 = right.
+[*]
+
+
+Name:Fopen-rectangle-do
+Called with arg1 = top, arg2 = left, arg3 = bot, arg4 = right.
+[*]
+
+
+Name:Frectangle
+do
+Called with arg1 = actions for each row,
+arg2 = top, arg3 = left, arg4 = bot, arg5 = right.
+[*]
+
+
+Name:Frectangle-do
+Called with arg1 = actions for each row,
+arg2 = top, arg3 = left, arg4 = bot, arg5 = right.
+[*]
+Source:_rectang.min
+
+Source:_paras.min
+
+
+
+Name:F:auto-fill-mode
+Toggle auto-fill-mode.  In fill-mode, Space causes long lines to be broken.
+[*]
+
+
+Name:F:backward-paragraph
+	Move back to start of paragraph. This stays in the current
+paragraph unless it is already at the start of a paragraph.
+[*]
+
+
+Name:F:fill-paragraph
+Fill out the current paragraph so that no line is longer than #(F-fill-column)
+...mark 2 = starting point.
+[*]
+
+
+Name:F:forward-paragraph
+	Move forward to next start of paragraph. This will always
+leave the current paragraph.
+[*]
+
+
+Name:F:split-line
+Args:(if-split,if-fail,if-short)
+	Split the current line if point is to the right of the fill column.
+If possible find a breaking point to the left of the fill column, but if that 
+fails then take the first possible breaking point.
+	A possible breaking point is at the left end of whitespace to the
+right of the fill-prefix (which for this purpose is assumed to be there).
+	This functions returns one of the arguments according to the outcome.
+[*]
+
+
+Name:Ffill-paragraph-do
+	First fill out the current line. Then split the end off the
+current line so it is not longer than ##(F-fill-column), if possible.
+If not possible, then make it as short as possible.  In any case,
+don't split it in the fill prefix or immediately after.
+[*]
+
+
+Name:Ffill-paragraph-do-do
+	Fill up the current line with succeeding lines until it is at
+least as long as #(F-fill-prefix) or contains the end of the
+paragraph.
+[*]
+
+
+Name:Fis-para-start
+[wjm 4/7/90] Returns:
+	"" if point is inside a paragraph.
+	"p" if point is at the start of a paragraph.
+  	"w" if match to paragraph separate & is not the start of the file.
+	"]" if point is at the end of the file.
+	"[" if point is at the start of the file and at at paragraph separator.
+Assumes point is either EOF or start of a line. The start of a
+paragraph is a line which either does not start with the fill-prefix,
+or starts with the fill-prefix followed by F-paragraph-separate.
+Note: I've changed F-paragraph-separate and F-paragraph-start to omit
+the beginning "^".  See comments there for definitions of start of paragraph
+used here.
+[*]
+Source:_paras.min
+
+Source:_move.min
+
+
+
+Name:F:backward-char
+Move the point back by one character
+[*]
+
+
+Name:F:backward-word
+Move backward to the beginning of the previous word.
+[*]
+
+
+Name:F:beginning-of-buffer
+Use arg1 to move a given number of tenths through the buffer.
+[*]
+
+
+Name:F:beginning-of-line
+Move to the beginning of the current line.
+[*]
+
+
+Name:F:end-of-buffer
+Move to the end of the buffer.
+[*]
+
+
+Name:F:end-of-line
+Move to the end of the current line.
+[*]
+
+
+Name:F:forward-char
+Move forward one character
+[*]
+
+
+Name:F:forward-word
+Move to the beginning of the next word.
+[*]
+
+
+Name:F:goto-line
+Goto an absolute line in the current buffer.
+[*]
+
+
+Name:F:mark-whole-buffer
+Set the region to the entire buffer.
+[*]
+
+
+Name:F:mark-word
+Set a mark at the end of the next word.
+[*]
+
+
+Name:F:move-to-window-line
+   Move point to left margin on the line halfway down the screen or
+window.  Text does not move on the screen.  A numeric argument says
+how many screen lines down from the top of the window (zero for the
+top).  A negative argument from the bottom (-1 for the bottom).
+[*]
+
+
+Name:F:next-line
+Move down a line, remembering which column we were in.
+[*]
+
+
+Name:F:pop-mark
+Modified by Ashok P. Nadkarni
+Pop a mark from the mark ring. Direction of ring movement depends on the
+sign of the arg1. The point is set to the current mark and then the ring
+rotated in the appropriate direction.
+[*]
+
+
+Name:F:previous-line
+Move up a line, remembering which column we were in.
+[*]
+
+
+Name:F:scroll-down
+Move the cursor up one page.
+[*]
+
+
+Name:F:scroll-left
+Scroll selected window display ARG columns left.
+Default for ARG is window width minus 2.
+[*]
+
+
+Name:F:scroll-right
+Scroll selected window display ARG columns right.
+Default for ARG is window width minus 2.
+[*]
+
+
+Name:F:scroll-up
+Move down a page.
+[*]
+
+
+Name:F:scroll-up-other-window
+GNU emacs' M-C-v.  
+[*]
+
+
+Name:F:swap-point-and-mark
+Set the mark to where the point is, and set the point to where the mark was.
+[*]
+
+
+Name:F:tab-to-tab-stop
+Set point to next tabstop in F-tab-stop-list.
+[*]
+
+
+Name:F:yank-pop
+Replace the previously un-kill'ed text with the previous kill ring entry.
+[*]
+
+
+Name:Fbackward-sentence
+Move backward to the beginning of the previous sentence.
+(Was #(F:backward-sentence) in the Freemacs 1.5e distribution).
+[*]
+
+
+Name:Fbackward-skip-nonwhite
+Skip whitespace to the left of point.  If arg1 is nonnull, newline is not
+whitespace.
+[*]
+
+
+Name:Fbackward-skip-white
+Skip whitespace to the left of point.  If arg1 is nonnull, newline is not
+whitespace.
+[*]
+
+
+Name:Ffind-non-blank
+Put point at non-whitespace char to right if arg1 = >
+put point under last whitespace char to left if arg1 = <
+Treat <returns> as whitespace if arg2 = crlf
+[*]
+
+
+Name:Fforward-sentence
+Move to the beginning of the next sentence.
+(Was #(F:forward-sentence) in the Freemacs 1.5e distribution).
+[*]
+
+
+Name:Fforward-skip-white
+Skip whitespace to the right of point.  If arg1 is nonnull, newline is not
+whitespace.
+[*]
+
+
+Name:Fforward-skip-nonwhite
+Skip non whitespace to the right of point.  If arg1 is nonnull, newline is not
+whitespace.
+[*]
+
+
+Name:Fgoto-row-and-column
+Go to the column given in arg1 and the row given in arg2.
+[*]
+
+
+Name:Fmark
+A character from @ to F which is the current mark in the mark ring.
+[*]
+
+
+Name:Fscroll-up-down
+Move up or down a page by the number of lines given in arg1.
+[*]
+
+
+Name:Fset-new-mark
+Set the next mark on the mark ring to the mark given in arg1.
+[*]
+Source:_move.min
+
+Source:_modes.min
+
+
+Name:F:ASM-mode
+This will set the local mode to Assembly Language.
+[*]
+
+
+Name:F:Buffer Menu-mode
+This will autoload the D library, dired.
+[*]
+
+
+Name:F:auto-spell-mode
+Toggle auto-spell-mode.  In spell-mode, Space and Return spell check the
+word before the point.
+[*]
+
+
+Name:F:overwrite-mode
+Toggle Overwrite mode.  In Overwrite mode, typed characters replace existing
+characters.
+[*]
+
+
+Name:F:save-all-libs
+Save all modified libraries.
+[*]
+
+
+Name:Fenter-local-modes
+Given the mode of the current buffer, enter all the local modes, i.e. the major
+mode for this buffer, and any minor modes in effect.  Eventually, we'll deal
+with local variables.
+[*]
+
+
+Name:Fenter-minor-mode
+Add a minor mode to the current buffer's mode.
+[*]
+
+
+Name:Fexit-minor-mode
+Remove a minor mode from the current buffer's minor mode list.
+[*]
+
+
+Name:Fexit-mode
+This will undo the local mode's changes.  Always resets the syntax table
+to Fsyntax.
+[*]
+
+
+Name:Ffor-all-libs
+Execute the string named in arg1 on all lib letters.  Equivalent to #(arg1,F)
+#(arg1,M)#(arg1,K) etc...
+[*]
+
+
+Name:Fin-minor-mode
+If we are in minor mode arg1, return arg2 else arg3
+[*]
+
+
+Name:Flib-letter
+Return the name (single letter) of the library to which the string
+arg1 belongs, arg2 is used as prefix.
+[*]
+
+
+Name:Fload-lib
+Load the library whose filename is given in arg1.
+[*]
+
+
+Name:Fmode-line
+This shows us where we are and what we're doing.
+[*]
+
+
+Name:Fmode-parens
+Parentheses around the major and minor modenames
+[*]
+
+
+Name:Fsave-docs
+Save the documentation for a library.
+[*]
+
+
+Name:Fsave-lib
+Write a library and its documentation out.  Make a backup of the library.
+**** Be sure to execute this ONLY in Fundamental mode, and without any
+libraries installed. ****
+[*]
+
+
+Name:Fset-minor-mode
+Enter or exit minor mode arg1 according to arg2.  If arg2 is blank, toggle
+the minor mode.  If arg2 is greater than zero, enter, else exit.
+[*]
+
+
+Name:Fset-mode-by-ext
+Note: the function that implements foo-mode must be defined in the F library,
+otherwise it will not be recognized.
+[*]
+
+
+Name:Fset-modename
+This changes the local major mode to arg1.
+[*]
+
+
+Name:Fsetdown-lib
+Set down a library.  That is, unchange anything the library changed.
+[*]
+
+
+Name:Fsetup-lib
+Set up a library.  That is, change anything the library needs changed.
+[*]
+Source:_modes.min
+
+Source:_kills.min
+
+
+
+Name:F:append-next-kill
+Causes the next kill to be appended to the previous kill string.
+[*]
+
+
+Name:F:backward-kill-sentence
+CAUTION: (forward-sentence) seems to be broken!
+[*]
+
+
+Name:F:copy-region-as-kill
+The contents of the region are copied to the kill ring.
+MODIFIED BY APN -
+There was a bug in the original procedure in that when the command previous
+to copy-region was a kill, the copy-region would insert the previous kill
+into the current  buffer location. The code below corrects for this. If the
+previous command was a kill, (indicated by ##(result) == kill), then the new
+code is used, else the old code is used. The new code actually works for all
+cases but we use it only when necessary so that we do not unnecessarily
+insert into the buffer before the kill (this  matters only for large regions
+where there might not be enough string space).
+[*]
+
+
+Name:F:delete-backward-char
+Delete the character before the point.
+[*]
+
+
+Name:F:delete-blank-lines
+Delete all but one of many consecutive blank lines.
+[*]
+
+
+Name:F:delete-char
+The character to the right of the point is deleted.
+[*]
+
+
+Name:F:delete-horizontal-space
+Kill newlines only if there's an argument. (More like GNU emacs.)
+[*]
+
+
+Name:F:kill-comment
+Delete the comment on this line.
+[*]
+
+
+Name:F:kill-region
+Kill the text between point and mark.
+[*]
+
+
+Name:F:kill-spaces
+Kill space on either side of point.
+[*]
+
+
+Name:F:un-kill
+Bring something back from the kill ring.
+[*]
+
+
+Name:F:un-kill-pop
+Replace the previously un-kill'ed text with the previous kill ring entry.
+[*]
+
+
+Name:F:zap-to-char
+Prompts for a character and deletes the text between the point and the
+first occurence of this char.
+[*]
+
+
+Name:Fbackward-delete-whitespace
+Delete whitespace to the left of point.
+[*]
+
+
+Name:Fbackward-kill
+Delete characters to the left of point.  This is needed so that repeated kills
+get placed in the correct order.
+[*]
+
+
+Name:Fkill
+Kill to a given mark.
+[*]
+
+
+Name:Fkill-buffer
+Kill the current buffer.
+[*]
+
+
+Name:Fkill-do
+Arg1 is the function to move over the text, and arg2 is the count.
+Arg3 is either "backward-" or it is null.
+[*]
+
+
+Name:Fkill-line
+Move to the end of the current line.
+[*]
+
+
+Name:Fkill-to-buffer-one
+Given
+arg1 = ASCII value of mark in buffer one,
+arg2 = mark in current buffer to kill to.
+arg3 = new if this is a new mark,
+       forward if we should apppend to right of previous, and
+       backward if we should prepend to left of previous.
+
+[*]
+
+
+Name:Fkill.head
+current entry in kill ring.
+[*]
+
+
+Name:Fkill.size
+maximum number of entries in the kill ring.
+[*]
+
+
+Name:Fun-kill-from-buffer-one
+Insert the text from buffer one found at the mark whose ASCII value is arg1.
+[*]
+Source:_kills.min
+
+Source:_keys.min
+
+
+
+Name:F:bind-to-key
+Bind a key to a function.  Prompts for a function name and key.
+[*]
+
+
+Name:F:digit-argument
+Start parsing meta digits as a numeric argument.
+[*]
+
+
+Name:F:prefix-C-c 
+Parse C-c prefix characters, i.e. C-c.
+[*]
+
+
+Name:F:prefix-C-x 
+Parse C-x prefix characters, i.e. C-x.
+[*]
+
+
+Name:F:prefix-C-x 4 
+Parse C-x 4 prefix characters, i.e. C-x 4.
+[*]
+
+
+Name:F:prefix-M-
+Parse M- prefix characters, i.e. Escape.
+[*]
+
+
+Name:F:unbind-key
+Remove a key binding.
+[*]
+
+
+Name:F:universal-argument
+Prompt for a numeric argument.  Default to four.  If pressed again, multiply
+the count by four.
+[*]
+
+
+Name:Fargument-do
+Decide if arg1 is another argument character.  If not, execute it.
+The first line decides if arg1 is a number or else if it is a dash at the
+beginning.
+[*]
+
+
+Name:Fargument-execute
+Decide if a function knows how to deal with an argument.  If not, use the
+argument as a repeat count.
+[*]
+
+
+Name:Fbind-key
+Find the key arg2 to the function arg1.  Prompt for arg2 if missing.
+RFS: If arg2 is C-g, make sure the user does it on purpose.
+[*]
+
+
+Name:Flocal-bind-key
+Define a local key binding, remembering it for later removal from the key map.
+[*]
+
+
+Name:Fvalid-key
+Waits for a key to be pressed. If the key isn't bound to F:ring-the-bell
+(like C-g is) then return arg1 with is-SELF set to the key. As an alternative
+to pure #(g), it allows the coming actions to be interrupted.
+It *is* possible to execute arg1 with is-SELF as C-g, if the user explicitly
+says so in Fvalid-key.
+[*]
+Source:_keys.min
+
+Source:_kbdmacr.min
+
+
+
+Name:F:call-last-kbd-macro
+Execute a previously defined keyboard macro
+[*]
+
+
+Name:F:name-last-kbd-macro
+Give a name to a previously defined keyboard macro
+[*]
+
+
+Name:F:start-kbd-macro
+Start remembering keys into a keyboard macro.
+[*]
+
+
+Name:F:stop-kbd-macro
+Stop remembering a keyboard macro.  The key may be executed with C-x e.
+[*]
+
+
+Name:Fkbd-macro-g
+This is the #(g) during keyboard macro definition.
+[*]
+
+
+Name:Frun-kbd-macro
+Execute a keyboard macro.
+[*]
+Source:_kbdmacr.min
+
+Source:_input.min
+
+
+
+Name:F:recursive-edit
+Call with arg1 = code to execute if the user wishes to continue the function.
+[*]
+
+
+Name:Ferror
+Report arg1 as an error only if it is non-null.
+[*]
+
+
+Name:Fget-key
+This is the prototype for #(g), the function to get keys from the user.
+[*]
+
+
+Name:Fget-key-with-prefixes
+This function will get a key even if they key is prefixed with something.
+[*]
+
+
+Name:Fget-key-with-prefixes-do
+Extended to handle multiple prefixes, as in C-x 4 f
+[*]
+
+
+Name:Fhit-any-key
+Give the user a chance to see his overwritten output.  If they press anything
+other than space, use it as input.
+[*]
+
+
+Name:Finsist
+Insist upon a non-null arg1.
+  arg1 = argument to supply
+  arg2 = function to call with the argument.
+  arg3 = code to execute if they supply the argument.
+[*]
+
+
+Name:Fkbd-in
+Fake a keypress.  Use ##(kbd-in) as a keyboard buffer.  If it exists, just
+append the new key to it.  Otherwise, define g to fetch keys from the input
+buffer.  If arg2 is non-empty, prepend the key.
+#(Fkbd-in,x)#(Fkbd-in,y)
+#(Fkbd-in,x)#(Fkbd-in,C-g)#(Fkbd-in,y)
+[*]
+
+
+Name:Fkbd-in-do
+Fake a keypress.
+[*]
+
+
+Name:Fkey2char.C-i
+Insert a Tab.
+[*]
+
+
+Name:Fkey2char.Comma
+Comma self-inserts
+[*]
+
+
+Name:Fkey2char.LPar
+LPar self-inserts
+[*]
+
+
+Name:Fkey2char.RPar
+RPar self-inserts
+[*]
+
+
+Name:Fkey2char.Tab
+Tab self inserts.
+[*]
+
+
+Name:Fmessage
+Show a message to the user.  After the user presses a key, erase it.
+[*]
+
+
+Name:Fok-to-trash-buffer
+#(Fok-to-trash-buffer,FUNCTIONS) asks the user if it is ok to trash the
+buffer.  If the user responds with 'yes', then FUNCTIONS is executed.
+CRC: Added buffer name to prompt.
+[*]
+
+
+Name:Fquoted-char
+Prompt the user for a control character, and return the character.
+[*]
+
+
+Name:Freadline
+Read a line of text from the minibuffer.
+On entry, #(value) is the default string.
+arg1=prompt
+arg2=string to execute if input is confirmed with return.  The users input
+     is in #(value)
+arg3=mode.
+The mode variable lets keys be redefined in readline mode.  For example,
+isearch defines ^S and ^R specially, and extended-command defines space and
+escape specially.
+[*]
+
+
+Name:Freadline.Back Space
+Remove the rightmost character.
+[*]
+
+
+Name:Freadline.C-c
+Quit the readline.
+[*]
+
+
+Name:Freadline.C-g
+If empty input, quit the readline, else empty the input.
+[*]
+
+
+Name:Freadline.C-h
+Delete the rightmost character.
+[*]
+
+
+Name:Freadline.C-l
+Read a character out of the text buffer.
+[*]
+
+
+Name:Freadline.C-m
+Accept the input.
+[*]
+
+
+Name:Freadline.C-o
+Read a word out of the text buffer.
+[*]
+
+
+Name:Freadline.C-q
+Get a control character and insert it.
+[*]
+
+
+Name:Freadline.C-y
+If this is the first time, kill the old value.  Yank.
+[*]
+
+
+Name:Freadline.Return
+Return accepts the input.
+[*]
+
+
+Name:Freadline.other
+If this is the first time, kill the old value else add printables.
+[*]
+
+
+Name:Fy-or-n
+#(Fy-or-n,PROMPT,FUNCT) will wait for a key and execute FUNCT using #(Fr) if
+that key is 'y' or 'n'.  Doesn't execute FUNCT if C-g (cancel) is pressed.
+It keeps trying until a recognized key is hit.
+[*]
+Source:_input.min
+
+Source:_indent.min
+
+
+
+Name:F-indent-tabs-mode
+Non-nil if #(Fpad-to-column) is allowed to use tabs.
+[*]
+
+
+Name:F:indent
+Indent to the next tab stop
+[*]
+
+
+Name:F:indent-for-comment
+Insert the indentation for a comment.  If given an argument, realign the
+comments on that many lines.
+[*]
+
+
+Name:F:indent-newline
+Insert a newline followed by the same whitespace as on the previous line.
+[*]
+
+
+Name:F:indent-region
+Apply TAB to every line in the region.  If an argument is given, then align
+the first non-blank character of every line with that column.
+[*]
+
+
+Name:F:indent-rigidly
+Change the indentation on a line.
+[*]
+
+
+Name:Findent-point
+Return the column of the next indent point.
+wwww     x   yyyy    z
+#(Findent-point)
+[*]
+Source:_indent.min
+
+Source:_history.min
+
+
+
+Name:F:edit-command-history
+Write command history in buffer.
+[*]
+
+
+Name:F:read-command-history
+Read command history from the current buffer.
+[*]
+
+
+
+Name:Fhistory-next
+Go up the history stack.
+[*]
+
+
+Name:Fhistory-previous
+Go down the history stack.
+[*]
+
+
+Name:Fhistory-save
+Store argument on top of the history stack, but only if it's longer than two
+characters and distinct from TOS. Go to TOS in any case.
+[*]
+Source:_history.min
+
+Source:_help.min
+
+
+
+Name:F:apropos
+Search the names of functions for a substring.
+[*]
+
+
+Name:F:help
+Give the user some assistance.
+Add C-h k.
+[*]
+
+
+Name:Fapropos-do
+Return arg2 if it contains ##(value).  If arg1 = :, strip off the first two
+chars first.
+[*]
+
+
+Name:Fdescribe-mode
+Look for the string ?-arg1-mode-description and (if successful)
+display it's documention in a new buffer.
+[*]
+
+
+Name:Fhelp
+Called with the key that the user pressed in arg1.
+[*]
+
+
+Name:Fhelp-do
+Describe a key binding.
+Uses value instead of temp, so C-h k followed by C-h f has the right default.
+[*]
+
+
+Name:Fhelp-do-self-insert
+Describe a self-inserting key.
+[*]
+
+
+Name:Fhelp.C-c
+Help Tutorial
+[*]
+
+
+Name:Fhelp.C-d
+Help Tutorial
+[*]
+
+
+Name:Fhelp.C-g
+Quit help
+[*]
+
+
+Name:Fhelp.C-n
+Help News
+[*]
+
+
+Name:Fhelp.C-w
+Help Tutorial
+[*]
+
+
+Name:Fhelp.a
+Help Apropos
+[*]
+
+
+Name:Fhelp.b
+Help Bindings
+[*]
+
+
+Name:Fhelp.c
+Help Character
+[*]
+
+
+Name:Fhelp.f
+Help Function
+[*]
+
+
+Name:Fhelp.m
+Display a description of the current mayor mode.
+[*]
+
+
+Name:Fhelp.t
+Help Tutorial
+[*]
+
+
+Name:Fhelp.w
+Help Function:  where-is.  Prompts for command name then tells you which
+keys it is bound to.
+[*]
+Source:_help.min
+
+Source:_file.min
+
+
+
+Name:F:cd
+Change the current working directory.
+[*]
+
+
+Name:F:delete-file
+An MS-LOSS file is deleted.
+[*]
+
+
+Name:F:find-alternate-file
+Load the current buffer with a file.
+[*]
+
+
+Name:F:find-file
+Make a buffer current if already loaded, or else load it.
+[*]
+
+
+Name:F:insert-file
+Insert a file into the current buffer.
+[*]
+
+
+Name:F:list-directory
+Give a directory.  Use the default extension if none is given.
+[*]
+
+
+Name:Fdir-do
+Deal with one filename in a directory.
+[*]
+
+
+Name:F:rename-file
+Rename a file to another name.
+[*]
+
+
+Name:F:save-buffer
+Write out the current buffer without asking for a filename.
+[*]
+
+
+Name:F:save-some-buffers
+Write all files that have been modified.
+[*]
+
+
+Name:F:write-file
+Write out the current buffer, asking for a filename.
+[*]
+
+
+Name:F:write-region
+Write out the region, asking for a filename.
+[*]
+
+
+Name:Fabsolute-filename
+Given a relative filename, absolutize it.
+Tests:	The results assume we're on the C drive.
+#(Fabsolute-filename,min/min)			c:\emacs\min\min
+#(Fabsolute-filename,/min/min)			c:\min\min
+#(Fabsolute-filename,foo.bar)			c:\emacs\foo.bar
+#(Fabsolute-filename,\foo.bar)			c:\foo.bar
+#(Fabsolute-filename,/foo.bar)			c:\foo.bar
+#(Fabsolute-filename,c:/foo.bar)		c:\foo.bar
+#(Fabsolute-filename,c:\foo.bar)		c:\foo.bar
+#(Fabsolute-filename,c:\baz/foo.bar)		c:\baz\foo.bar
+#(Fabsolute-filename,c:\baz/foo.bar)		c:\baz\foo.bar
+#(Fabsolute-filename,c:\baz//foo.bar)		c:\foo.bar
+#(Fabsolute-filename,c:\baz/c:foo.bar)		c:\emacs\foo.bar
+#(Fabsolute-filename,c:\baz/c:/foo.bar)		c:\foo.bar
+#(Fabsolute-filename,c:\baz\baz\foo.bar)	c:\baz\baz\foo.bar
+#(Fabsolute-filename,c:\baz\..\foo.bar)		c:\foo.bar
+#(Fabsolute-filename,c:\baz\fie\..\foo.bar)	c:\baz\foo.bar
+#(Fabsolute-filename,c:foo.bar)			c:\emacs\foo.bar
+#(Fabsolute-filename,d:foo.bar)			d:\foo.bar
+[*]
+
+
+Name:Fabsolute-filename-do
+Boy do we have to be tricky here.  If arg2 and arg3 are empty, then we're done,
+all we have to do is include the last component of the filename.  If arg2 is
+empty, then we must have gotten two slashes, which means restart from root.
+The bare comma causes the enclosing Fonly-last to drop the leading junk.  If
+we have a .. *after* this, then drop this component of the pathname.
+[*]
+
+
+Name:Fextens-only
+Returns only the extension of the filename in arg1.
+[*]
+
+
+Name:Ffind-a-file
+Search for a file among those given in arg1.  Return arg2 if no matches,
+arg3 if one match, arg4 if multiple matches.
+[*]
+
+
+Name:Ffind-file-do
+Decide whether to use an existing buffer or load a new one.
+[*]
+
+
+Name:Fnew-extens
+Strips the extension off filename (arg1) and appends ext (arg2) to it.
+#(Fnew-extens,foo,baz)
+#(Fnew-extens,foo.,baz)
+#(Fnew-extens,foo.bar,baz)
+#(Fnew-extens,c:foo.bar,baz)
+#(Fnew-extens,c:/foo.bar,baz)
+#(Fnew-extens,c:\foo.bar,baz)
+#(Fnew-extens,c:\foo.bar\fee,baz)
+#(Fnew-extens,c:\foo.bar\fee.,baz)
+#(Fnew-extens,c:\foo.bar\fee.fie,baz)
+[*]
+
+
+Name:Fonly-fn
+Split out just the filename from a complete path.
+[*]
+
+
+Name:Fonly-path
+Split out just the path from a complete path.
+[*]
+
+
+Name:Fread-file
+Read a (small!) file and return the contents.
+[*]
+
+
+Name:Fread-filename
+Read a filename, using arg1 as the prompt, arg2 as the thing to do.  If arg3
+is non-null, don't complain about specifying directory names.
+[*]
+
+
+Name:Fsave-buffer-if-modified
+#(Fsave-buffer-if-modified) will save the buffer into
+##(buffer-filename).tmp if the buffer has been modified.
+[*]
+
+
+Name:Ftrash-buffer
+Gives the user a chance to save unsaved changes.  First we check to see if we
+should ask the user about saving this buffer.  arg1 is the current buffer,
+arg2 is the buffer form which the command was invoked, arg3 is the name
+of the function to execute if none of the questions are C-g'ed.
+[*]
+
+
+Name:Fuse-default-ext
+Appends the default extension to the filename if the filename doesn't
+already have an extension.
+[*]
+
+
+Name:Fwrite-file
+Actually write the file to the filename given in arg1.
+If arg2 is zero, don't make a backup, regardless of what F-make-backups says.
+Fwrite hook may be used to record change log information.
+[*]
+
+
+Name:Fwrite-hook
+If the file has a line containing "History:", the current line number and
+column will get inserted following the colon.  If the file has a line
+containing "Edit History:" OR if the variable edit-history is set to yes,
+then every time you save the file, you will be asked why you are saving
+the file, and a line with the time and date and the reason for saving will
+be inserted after the "Edit History:" line.
+
+The edit-history portion of save has a bug, it appears.  If you save
+a file and emacs inserts a line into the file for the edit
+history, it fails to adjust for the line it just added in the number
+inserted in the file (even when the cursor is below the inserted
+line).  The problem also exists that if the cursor is above the
+inserted line, then emacs set move the cursor down a line
+
+Also, if you have both Edit History and the edit-history variable set
+on (as is the default), every line of history inserted gets the word
+"Edit" inserted, free of charge.  Maybe you should put the test for
+the Edit keyword first.
+
+[*]
+Source:_file.min
+
+Source:_compile.min
+
+
+
+Name:F:compile
+Run MAKE on makefile.
+[*]
+
+
+Name:F:next-error
+Parse error messages from Turbo-C, MS-Masm and MS-C.
+[*]
+
+
+Name:F:previous-error
+Search backwards for the previous error.
+[*]
+
+
+Name:Fparse-error-borland
+Parse the current borland-style (well, TC at least) error.
+[*]
+
+
+Name:Fparse-error-do
+Find the source file arg1, go to line arg2 of it, and announce the error arg3.
+[*]
+
+
+Name:Fparse-error-ms
+Obsolete MINT code replaced. (tho, Sat Oct 14 19:12:48 1989)
+[*]
+
+
+Name:Fparse-error-search
+Slightly changed. (tho, Sat Oct 14 19:13:23 1989)
+[*]
+Source:_compile.min
+
+Source:_case.min
+
+
+
+Name:F:capitalize-word
+Capitalize word(s) before/after point.
+[*]
+
+
+Name:F:downcase-region
+Change the entire region to lowercase.
+[*]
+
+
+Name:F:downcase-word
+Lowercase word(s) before/after point.
+[*]
+
+
+Name:F:upcase-region
+Uppercase the region.
+[*]
+
+
+Name:F:upcase-word
+Uppercase word(s) before/after point.
+[*]
+
+
+Name:Fcapitalize-word-do
+Capitalize the word after point.
+[*]
+
+
+Name:Fcase
+Args:(a01,a02,a03,a04,a05,a06,a07,a08,a09,a10,a11,a12,a13,a14,a15,a16,a17,a18,a19,a20)
+[wjm 4/13/90]  The only argument that should be unprotected is the one
+instance of arg2.
+[wjm 4/30/90] Allow up to 18 cases, plus (mandatory) default.
+................
+(lots more explanation than code.  This sucker's tricky)
+
+If you look at the second ==, #(==,arg1,arg2,(...)), you might expect
+that if arg1 == arg2 then (...) gets returned.  However, Fcase is called
+like this:
+
+#(Fcase,arg1,
+	(new,(
+		stuff to do if arg1 = new.
+	)),
+	(forward,(
+		stuff to do if arg1 = forward.
+	)),
+	(backward,(
+		stuff to do if arg1 = backward.
+	)),
+	(
+		stuff to do if arg1 isn't any of the above
+	)
+)
+
+As you can see, arg2 has an unprotected comma in it, so that when the 
+second == gets executed, it looks like this:
+
+#(==,arg1,new,(yes),(no))
+
+Tests:
+
+#(Fcase,a,(a,yes a),(b,yes b))
+#(Fcase,b,(a,yes a),(b,yes b))		[doesn't work]
+#(Fcase,b,(a,yes a),(b,yes b),(yes c))
+#(Fcase,c,(a,yes a),(b,yes b),(yes c))
+Ok, the code starts here:
+[*]
+
+
+Name:Fcase-fold
+Given a string in old-search and old-replace and a match in temp, return the
+replacement string.
+  arg1 = ASCII value of char from old-search.
+  arg2 = ASCII value of char from old-replace.
+  arg3 = ASCII value of char from temp.
+[*]
+
+
+Name:Fdowncase-word-do
+Lowercase the word after point.
+[*]
+
+
+Name:Fupcase-word-do
+Uppercase the word after point.
+[*]
+
+
+Name:Fxlat-region
+Translate the region according to the mark in arg1, and the string in arg2.
+Note: cannot be called with a local mark (0..9).
+[*]
+
+
+Name:Fxlat-words
+Translate words, accepting numerical arguments like GNU Emacs.
+BUG: in case of a negative argument, if there are too few words
+between [ and point, also words to the right of point might be translated.
+[*]
+Source:_case.min
+
+Source:_buffers.min
+
+
+Name:Ffilename
+This is the filename that we store the fundamental library in.
+[*]
+
+
+Name:F:kill-buffer
+Delete a buffer.
+[*]
+
+
+Name:F:list-buffers
+Display a list of the buffers.
+
+[*]
+
+
+Name:F:next-buffer
+Step forward in buffer list.
+[*]
+
+
+Name:F:previous-buffer
+Step backward in buffer list.
+[*]
+
+
+Name:F:not-modified
+Makes the current buffer think that it hasn't been modified (unless read-only)
+[*]
+
+
+Name:F:select-buffer
+Change the current buffer.
+[*]
+
+
+Name:Fbuffer-fn
+Return the current buffer filename or [No File].
+[*]
+
+
+Name:Fbuffer-has-fn
+Return arg1 if the buffer has a filename else arg2.
+[*]
+
+
+Name:Fbuffer-modified
+#(Fbuffer-modified,YES,NO,WRITE) executes
+YES if the buffer has been modified, NO if the buffer has not been modified,
+and WRITE if the buffer is write-only.
+[*]
+
+
+Name:Fbuffer-set-fn
+If a name is given, set the buffer's filename to it, else get rid of any
+pre-existing filename.
+[*]
+
+
+Name:Fexcurse-buffer
+Execute the code in arg1 and switch back to the buffer we were in.  Presumably,
+that code changed to a different buffer.
+[*]
+
+
+Name:Ffind-buffer
+Find a buffer with a given filename or file type.  If one is null, then
+anything will match it.  The third arg is returned with the current buffer
+set to the desired buffer.  If the buffer is not found, the fourth arg is
+returned with the old buffer restored.
+##(old-buffer) is set to the old buffer number.
+[*]
+
+
+Name:Ffind-buffer-do
+Look at a single buffer and match it according to #(Ffind-buffer)
+[*]
+
+
+Name:Ffind-buffer-do-do
+Return yes or no if the current buffer has type arg1 and filename arg2.
+[*]
+
+
+Name:Ffind-or-make-buffer
+Given a filename, find a buffer for it or make it.  If arg2 is empty,
+scratch the buffer.
+[*]
+
+
+Name:Ffor-all-buffers
+#(Ffor-all-buffers,STRING) will execute the function named in
+STRING for every user buffer.  Equivalent to #(ba,2)STRING #(ba,3)STRING,
+etc. for all the buffers that exist.
+[*]
+
+
+Name:Flist-buffers-do
+Show information on the buffer given in arg1.
+
+[*]
+
+
+Name:Frecall-buffer
+Return the most recently visited buffer that isn't visible.
+[*]
+
+
+Name:Fremember-buffer
+If arg1 is not null, send this buffer to the bottom of the list.  Otherwise,
+send it to the top of the list.
+[*]
+
+
+Name:Freturn-to-buffer
+Send arg1 to remember-buffer.
+[*]
+
+
+Name:Fswitch-to-buffer
+Switch to the buffer named in arg1.  If it exists, execute arg2.  If arg3
+is non-null, bury the old buffer.
+[*]
+Source:_buffers.min
+
+Source:user.min
+
+Source:user.min
+
+Source:minted.min
+
+
+
+
+Source:minted.min

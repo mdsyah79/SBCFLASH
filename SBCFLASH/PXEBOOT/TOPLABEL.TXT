@@ -1,0 +1,5 @@
+;=============THIS PORTION IS FROM NEW CELLSERV.INI==============
+;=====PLEASE USE [Positioner] [HSASTACK] [HSASTACKTD] VALUES=====
+;==================FROM ORIGINAL FILE BELOW======================
+;=============PLEASE DELETE THIS LABEL BEFORE SAVING=============
+;

@@ -1,0 +1,8 @@
+
+
+;=============BELOW PORTION IS FROM ORIGINAL CELLSERV.INI==============
+;==========STEP 1:PLEASE UPDATE THE MDWID TO THE TOP PORTION===========
+;============STEP 2:PLEASE DELETE LINES 1 TO 6 AFTER STEP 1============
+;================PLEASE DELETE THIS LABEL BEFORE SAVING================
+
+

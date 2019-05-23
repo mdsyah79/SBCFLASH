@@ -1,0 +1,14 @@
+Begin3
+Title:          Wget
+Version:        1.11.2
+Entered-date:   2013-06-13
+Description:    The non-interactive network downloader.
+Keywords:       freedos, wget
+Author:         Hrvoje Niksic <hniksic@arsdigita.com>
+Maintained-by:  -
+Primary-site:   http://ibiblio.org/pub/micro/pc-stuff/freedos/files/distributions/1.2/repos/pkg-html/wget.html
+Alternate-site: -
+Original-site:  -
+Platforms:      FreeDOS
+Copying-policy: GNU General Public License, Version 3
+End

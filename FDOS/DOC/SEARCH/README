@@ -1,0 +1,34 @@
+Search
+------
+Copyright (c) Joe Cosentino 1997.
+
+Overview
+--------
+  This searches for files on your computer, tells you where they are, and
+  how many total.  This was one of the first programs I wrote in C.
+
+Source code
+-----------
+  The source code is available under the terms of the GNU General Public
+  License (copying.txt).  If you want to use it in your programs, the
+  program you are writing must be released under the GNU GPL as well.  No
+  royalties are expected, although donations are always accepted :-).
+
+  The source was compiled with Borland Turbo C++ 3.0.  If you want to compile
+  the sources with other compilers, you may have to tweak a couple of files
+  to get it to work.
+
+Making changes
+--------------
+  The rules of making changes are as follows:
+    1) You may not use this program or source code for financial gain.
+    2) You must leave the copyright notice intact.
+    3) Please document what you have done in the history file.
+    4) Don't make things harder than they already are.
+
+Warranties
+----------
+  This program comes as-is and without warranty of any kind.  The author of
+  this software assumes no responsibility pertaining to the use or misuse of
+  this software.  By using this software, the operator is understood to be
+  agreeing to the terms of the above.

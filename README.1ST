@@ -1,0 +1,74 @@
+This is SBCFLASH version 2.2
+1- Uses SED to update cellserv.ini the SERVERIP
+2- Uses SED to update mdwpxe.spt file tester ID. Previously This mode failed 
+        because we did not update mdwpxe.spt file when flashing PXEBOOT.
+3- mdwpxe.spt tester id extracted from cellserv.dat file
+4- Uses part program to restore fat16 1gb cf mbr to 4gb cf for more efficient partitioning.
+5- If sbcflash.mbr file missing from 4conv1 folder, will use fdisk partitioning tool.
+
+How to upgrade to v2.2:
+
+1- copy FDOS folder to flashing station drive
+2- copy sbcflash.mbr to c:\sbcflash\4conv1\ folder
+3- ren sbcflash\4conv1\fdpart.bat to fdpart0.bat
+4- copy new fdpart.bat to c:
+5- copy TESTDISK folder to c:\
+6- copy sbcflash\pxeboot\test folder to c drive same folder
+7- ren sbcflash\pxeboot\pxerstor.bat to pxersto0.bat
+8- copy sbcflash\pxeboot\pxerstor.bat folder to c drive same folder
+9- copy sbcflash\pxeboot\pxemenu.bat to c: same folder
+
+This is SBCFLASH version 2.21
+
+1- Resolved PXERSTOR bug where mdwpxe.spt was not copied over by seperating the copy commands
+2- Added function to ask user tester and id number. This is in line with ...
+conversion practice to immediately flash new CF with no cellserv.ini/dat.
+3- The inputted tester number and id number will be added into the files: 
+cellserv.ini\dat abd mdwpxe.spt (pxeboot config file)
+4- Added sed to remove "ServerIP=172.30.30.254" statement from cellserv.ini
+to prevent (esp ver 3.75) to force loading to server IP for PHARLAP boot.
+5- Added option to FDBACKUP.BAT to re-insert cellexe.exe when existing cf card doesn't exist the file (i.e. downgrade from pxe to pharlap)
+
+How to upgrade to version 2.21 (11April2019)
+
+REM PXERSTOR and PXEBAKUP instructions on 27 MARCH 2019 Wednesday
+
+Rename existing PXERSTOR.BAT to PXERSTO1(or 2).BAT
+Copy PXERSTOR.BAT from CF to SBC Flash HDD
+
+Rename existing PXEBAKUP.BAT to PXEBAKU1.BAT
+Copy PXEBAKUP.BAT from CF to SBC Flash HDD
+
+REM 1.bat and 2.bat upgrade for version 3.66 and 3.75
+
+Rename 1.bat to 1bak1.bat and 2.bat to 2bak1.bat
+Copy 1.bat and 2.bat from CF to SBC Flash HDD
+
+REM FDBACKUP and FDRSTOR upgrade instructions
+
+Rename FDBACKUP.BAT to FDBACKU1.BAT
+Copy from CF to SBC HDD
+
+Rename FDRESTOR.BAT to FDRESTO1.BAT
+Copy FDRESTOR.BAT from CF to SBC FLASH HDD
+
+*****This is SBCFLASH version 2.22******
+
+1- Disabled DOSFSCK utility in FDBACKUP.BAT function to avoid dataloss in unstable media
+2- Enabled 366 flash to accept FAT32. Will convert to FAT16 before formatting.
+3- Added "FDISK /MBR 2" after line "FDISK /CLEARALL 2" IN ALL PART SECTIONS to add new DOS MBR to prevent unable to boot up
+
+*****How to upgrade to version 2.22 (29April2019)******
+
+1(delay)- rename FDBACKUP.BAT to FDBACKU0.BAT and copy from D: to Flashing Station CF
+
+2- Rename \366\1.bat to 1BAK3.BAT. Copy from CF 1.bat
+   Copy 1CHKCF.BAT, 1PART.BAT and 1CLEAN.BAT to Flashing station CF
+
+3- copy autoexec.bat from cf to flashing station c drive
+
+4- ren sbcflash.bat to sbcflash.0r3,copy from cf card
+
+5- rename \375\1.bat and 2.bat to \375\1t375v3 and 2t375v3
+
+6- 

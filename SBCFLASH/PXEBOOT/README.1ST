@@ -1,0 +1,7 @@
+REM PXERSTOR and PXEBAKUP instructions on 27 MARCH 2019 Wednesday
+
+Rename existing PXERSTOR.BAT to PXERSTO1(or 2).BAT
+Copy PXERSTOR.BAT from CF to SBC Flash HDD
+
+Rename existing PXEBAKUP.BAT to PXEBAKU1.BAT
+Copy PXEBAKUP.BAT from CF to SBC Flash HDD

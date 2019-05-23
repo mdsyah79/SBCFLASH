@@ -1,0 +1,317 @@
+
+Source:minted.min
+Name:M!Mint-mode
+Enter Mint mode.
+[*]
+
+
+Name:M:compare-ed
+Read a .ED file.  Convert the file into an EDIT type file, preserving
+only those functions that DIFFER from the current ones.  This is very
+useful for making diffs between the currently loaded .ED files and
+other .ED files.
+[*]
+
+
+Name:M:copy-key
+Copy one key definition to another.
+[*]
+
+
+Name:M:cref-all
+Generate a buffer named *cref* containing a cross reference of all
+defined strings. Each used string is listed on a new line, followed by an
+asterisk if it is defined anywhere, and then followed by lines filled with
+the names of functions that reference it.
+[*]
+
+
+Name:M:cref-lib
+Generate a buffer called *cref* containing a cross reference of all
+strings used in a library. A prompt is issued for the library letter.
+Each used string is listed on a new line, followed by an asterisk if it
+is defined in the library, and then followed by lines filled with
+the names of functions in the library that reference it.
+[*]
+
+
+Name:M:done-editing
+Reads strings from the current buffer.
+[*]
+
+
+Name:M:ek
+Edit a key definition and it's assocated function.
+[*]
+
+
+Name:M:erase-string
+Erase the string named by arg1.
+[*]
+
+
+Name:M:eval-expression
+Execute a primitive.
+[*]
+
+
+Name:M:eval-last-sexp
+Evaluate the MINT expression before point.
+[*]
+
+
+Name:M:give-name
+Insert a null string definition.
+[*]
+
+
+Name:M:keys-read
+Read the keymap inserted by #(M:keys-edit)
+[*]
+
+
+Name:M:mint-expand
+Expand the MINT word to the left of point as much as possible.
+[*]
+
+
+Name:M:mint-grep
+#(M:mint-grep) will edit all strings containing STRING
+[*]
+
+
+Name:M:mint-newline
+Mint mode newline with auto indent, current indent level, and if breaking a
+line then indent it a little more.
+[*]
+
+
+Name:M:mint-rpar
+If we are putting our RPar on a line of code the just flash it, otherwise match
+the indenting of the LPar and then flash it.
+[*]
+
+
+Name:M:remove-nonexistant
+Remove non-existant functions from the documentation file.
+[*]
+
+
+Name:M:syntax-edit
+Edit the syntax table.
+[*]
+
+
+Name:M:syntax-read
+Read the syntax table back in.
+[*]
+
+
+Name:M:trace
+This function redefines a function to issue tracing output to a special buffer
+called *trace* whenever it is called or returns. The name of the function is
+prompted for.
+[*]
+
+
+Name:M:untrace
+This function undoes the effect of M:trace.
+[*]
+
+
+Name:M:untrace-all
+This function untraces all functions that have been traced.
+[*]
+
+
+Name:M:warn-undefined
+	If turned on, give an announcement when a nonexistent function is
+activated.  Turned on if (arg1 != ""), else turned off.
+[*]
+
+
+Name:Mcompare-read
+Define ##(name) and ##(data) to be the name and data of the next string.
+[*]
+
+
+Name:Mcref-lib-do
+Called with arg1 = a lib letter to cref.
+[*]
+
+
+Name:Mcref-one
+Called with the name of a function to cref.
+Get rid of syntactic sugar like ( and ) and #( and ##( and comma.
+[*]
+
+
+Name:Mcurrent-indent
+Return the indenting of the previous open paren.
+[*]
+
+
+Name:Mdebug
+Announce a string and wait for a key to be pressed.
+[*]
+
+
+Name:Mdefun
+arg1 is the name of the function.
+arg2 is the documentation of the function.
+arg3 is the body of the function.
+arg4 is the test code for the function.
+[*]
+
+
+Name:Mdflta
+	Like Fdflta, except that it gives a warning if the function is 
+undefined.
+	[wjm 4/1/90] -- BUG: warns only when LIB is undefined, which
+                    is to say only for things in libs emacs & key &
+                    user.
+	[4/4/90] -- above fixed. Also don't complain about Fvisit-hook
+		    and such.
+[*]
+
+
+Name:Mfind-documentation
+Return the documentation for a string.
+[*]
+
+
+Name:Mget-indent
+Return the indenting of the current line.
+[*]
+
+
+Name:Mgrep-do
+Grep the strings in the library whose lib letter is arg1
+[*]
+
+
+Name:Mgrep-do-do
+Grep the string named by arg1.
+[*]
+
+
+Name:Min-documentation
+Locate the documentation for the function arg2 in the library arg1.
+Execute arg3 if the documentation exists [with point just before the
+string-delimiter, and mark 0 just after the Name:.], otherwise execute
+arg4 if the documentation doesn't exist.
+[*]
+
+
+Name:Mint-cmd
+This is used to define the string #(d), which executes keys.
+[*]
+
+
+Name:Mread-ed
+Read a .ED file.  Return ##(name) and ##(data).  Dependent upon the format
+of .ED files.
+[*]
+
+
+Name:Mread-ed-chars
+Given a character count, read that many chars out of the buffer and
+advance point.
+[*]
+
+
+Name:Mread-ed-word
+Return a word from the two chars following point.
+[*]
+
+
+Name:Mstrings-delimiter
+Returns the string delimiter for Mstrings-read and M:strings-edit.
+[*]
+
+
+Name:Mstrings-edit-do
+Insert one string into the buffer for editing, unless it's already there.
+[*]
+
+
+Name:Mstrings-edit-do-do
+	Args:(cmd-name)
+Insert one string into the buffer for editing.
+	Modified (WJM): parallel to the above changes for M:done-editing,
+		I changed this so that M:ef will recognize the Arg: line
+		in the documentation and use those arguments.
+	   (3/11) fixed my bug: had #(rm,0) instead of ##(rm,0) when looking
+		for 'Args:'.  This raised hell when there was no Arg1, but 
+		'#(Fmu)' instead.
+
+[*]
+
+
+Name:Mstrings-read
+Read all the strings out of the text buffer.
+	WJM: modifications --
+		Looks for "Name:" only at start of line.
+		New keyword "Args:".  If this is given on the second
+			line, following the line with "Name:",
+			followed by a paranthesised argument list then
+			those argument names are used instead of
+			"arg1,arg2,...".
+arg1 is non-empty if the documentation should not be read.
+[*]
+
+
+Name:Mstrings-read-do
+Read the string arg2 out of the text buffer.  The string belongs in the library
+whose lib letter is arg1.  Note that this function will autoload libraries
+that are autoloadable.
+arg3 is non-empty if the documentation should not be read.
+[*]
+
+
+Name:Mt
+ace-do
+Redefine a string such that it inserts its invocation and its result.
+  arg1 = name of string to redefine.
+  arg2 = value of string.
+  arg3 = arglist.
+[*]
+
+
+Name:Mtrace-do
+Redefine a string such that it inserts its invocation and its result.
+  arg1 = name of string to redefine.
+  arg2 = value of string.
+  arg3 = arglist.
+[*]
+
+
+
+Source:minted.min
+
+Source:bytec.min
+#(Mbyte-compile,_BUFFERS.MIN)#(Mbyte-compile,_CASE.MIN)#(Mbyte-compile,_COMPILE.MIN)#(Mbyte-compile,_FILE.MIN)#(Mbyte-compile,_HELP.MIN)#(Mbyte-compile,_HISTORY.MIN)#(Mbyte-compile,_INDENT.MIN)#(Mbyte-compile,_INPUT.MIN)#(Mbyte-compile,_KBDMACR.MIN)#(Mbyte-compile,_KEYS.MIN)#(Mbyte-compile,_KILLS.MIN)#(Mbyte-compile,_MODES.MIN)#(Mbyte-compile,_MOVE.MIN)#(Mbyte-compile,_PARAS.MIN)#(Mbyte-compile,_RECTANG.MIN)#(Mbyte-compile,_REGISTE.MIN)#(Mbyte-compile,_SEARCHE.MIN)#(Mbyte-compile,_STARTUP.MIN)#(Mbyte-compile,_TRANSPO.MIN)#(Mbyte-compile,_UNCLASS.MIN)#(Mbyte-compile,_UTILS.MIN)#(Mbyte-compile,_VARIABL.MIN)#(Mbyte-compile,_WINDOWS.MIN)
+#(Mbyte-compile,mintednew.min)
+
+M-x ef of byte-compil
+
+
+
+Name:M:byte-compile-file
+Given the name of a .MIN file, compile it into .ED and .EDD files.
+[*]
+
+Name:Mbyte-compile-docs
+Switch to the documentation buffer, kill the old docs, and insert the new.
+Also remove the documentation from the *byte compile* buffer.
+[*]
+
+
+
+Name:Mbyte-compile
+Enter with arg1 set to the name of a file.
+Remove comments from the file.
+Define the strings in the file.
+Switch to the documentation buffer, kill the old docs, and insert the new.
+[*]
+Source:bytec.min

@@ -1,0 +1,147 @@
+
+
+Mon Apr 29 22:59:42 2019
+Command line: TestDisk
+
+TestDisk 7.0, Data Recovery Utility, April 2015
+Christophe GRENIER <grenier@cgsecurity.org>
+http://www.cgsecurity.org
+OS: DOS
+Compiler: djgpp 2.3
+Compilation date: Apr 18 2015 13:01:41
+ext2fs lib: 1.42.8, ntfs lib: libntfs-3g, reiserfs lib: 0.3.1-rc8, ewf lib: none, curses lib: pdcurses build  2401
+Disk 80 - 4293 MB / 4094 MiB - CHS 522 255 63
+Disk 80 Enhanced BIOS EDD-3.0 - R/W/I - Identify
+LBA 8388608, computed 8388576 (CHS=8322,16,63)
+hd_identify_enh_bios
+Disk 80 - 4294 MB / 4096 MiB - CHS 8322 16 63
+LBA size=8388608
+Disk 81 - 4293 MB / 4094 MiB - CHS 522 255 63
+Disk 81 Enhanced BIOS EDD-3.0 - R/W/I - Identify
+LBA 8388608, computed 8388576 (CHS=8322,16,63)
+hd_identify_enh_bios
+Disk 81 - 4294 MB / 4096 MiB - CHS 8322 16 63
+LBA size=8388608
+Hard disk list
+Disk 80 - 4294 MB / 4096 MiB - CHS 522 255 63, sector size=512
+Disk 81 - 4294 MB / 4096 MiB - CHS 522 255 63, sector size=512
+
+Partition table type (auto): Intel
+Disk 80 - 4294 MB / 4096 MiB
+Partition table type: Intel
+
+Analyse Disk 80 - 4294 MB / 4096 MiB - CHS 522 255 63
+Geometry from i386 MBR: head=255 sector=63
+FAT32 at 0/1/1
+test_FAT size boot_sector 4208967 > partition 4192902
+
+
+test_FAT()
+ 1 * FAT16 >32M               0   1  1   260 254 63    4192902
+sector_size  512
+cluster_size 8
+reserved     32
+fats         2
+dir_entries  0
+sectors      0
+media        F8
+fat_length   0
+secs_track   63
+heads        255
+hidden       63
+total_sect   4208967
+fat32_length 4103
+flags        0000
+version      0.0
+root_cluster 2
+info_sector  1
+backup_boot  6
+free_count   514745
+next_free    10037
+check_part_i386 failed for partition type 06
+get_geometry_from_list_part_aux head=255 nbr=2
+get_geometry_from_list_part_aux head=8 nbr=1
+get_geometry_from_list_part_aux head=16 nbr=1
+get_geometry_from_list_part_aux head=32 nbr=1
+get_geometry_from_list_part_aux head=64 nbr=1
+get_geometry_from_list_part_aux head=128 nbr=1
+get_geometry_from_list_part_aux head=240 nbr=1
+get_geometry_from_list_part_aux head=255 nbr=2
+Current partition structure:
+Error: size boot_sector 4208967 > partition 4192902
+Invalid FAT boot sector
+ 1 * FAT16 >32M               0   1  1   260 254 63    4192902
+ 1 * FAT16 >32M               0   1  1   260 254 63    4192902
+
+search_part()
+Disk 80 - 4294 MB / 4096 MiB - CHS 522 255 63
+FAT32 at 0/1/1
+FAT1 : 32-4134
+FAT2 : 4135-8237
+start_rootdir : 8238 root cluster : 2
+Data : 8238-4208965
+sectors : 4208967
+cluster_size : 8
+no_of_cluster : 525091 (2 - 525092)
+fat_length 4103 calculated 4103
+
+FAT32 at 0/1/1
+     FAT32                    0   1  1   261 254 63    4208967 [FREEDOS2016]
+     FAT32, blocksize=4096, 2154 MB / 2055 MiB
+set_FAT_info: name from BS used
+FAT32 at 262/1/1
+FAT1 : 32-4102
+FAT2 : 4103-8173
+start_rootdir : 8174 root cluster : 2
+Data : 8174-4176829
+sectors : 4176837
+cluster_size : 8
+no_of_cluster : 521082 (2 - 521083)
+fat_length 4071 calculated 4071
+set_FAT_info: name from BS used
+
+FAT32 at 262/1/1
+     FAT32                  262   1  1   521 254 63    4176837 [NO NAME]
+     FAT32, blocksize=4096, 2138 MB / 2039 MiB
+disk_pread_aux: Don't read after the end of the disk
+disk_pread_aux: Don't read after the end of the disk
+disk_pread_aux: Don't read after the end of the disk
+disk_pread_aux: Don't read after the end of the disk
+disk_pread_aux: Don't read after the end of the disk
+disk_pread_aux: Don't read after the end of the disk
+disk_pread_aux: Don't read after the end of the disk
+disk_pread_aux: Don't read after the end of the disk
+disk_pread_aux: Don't read after the end of the disk
+disk_pread_aux: Don't read after the end of the disk
+disk_pread_aux: Don't read after the end of the disk
+disk_pread_aux: Don't read after the end of the disk
+disk_pread_aux: Don't read after the end of the disk
+disk_pread_aux: Don't read after the end of the disk
+get_geometry_from_list_part_aux head=255 nbr=4
+get_geometry_from_list_part_aux head=8 nbr=1
+get_geometry_from_list_part_aux head=16 nbr=1
+get_geometry_from_list_part_aux head=32 nbr=1
+get_geometry_from_list_part_aux head=64 nbr=1
+get_geometry_from_list_part_aux head=128 nbr=1
+get_geometry_from_list_part_aux head=240 nbr=1
+get_geometry_from_list_part_aux head=255 nbr=4
+
+Results
+   * FAT32                    0   1  1   261 254 63    4208967 [FREEDOS2016]
+     FAT32, blocksize=4096, 2154 MB / 2055 MiB
+   L FAT32                  262   1  1   521 254 63    4176837 [NO NAME]
+     FAT32, blocksize=4096, 2138 MB / 2039 MiB
+add_ext_part_i386: max
+add_ext_part_i386: min
+
+interface_write()
+ 1 * FAT32                    0   1  1   261 254 63    4208967 [FREEDOS2016]
+ 2 E extended               262   0  1   521 254 63    4176900
+ 5 L FAT32                  262   1  1   521 254 63    4176837 [NO NAME]
+simulate write!
+
+write_mbr_i386: starting...
+write_all_log_i386: starting...
+write_all_log_i386: CHS: 262/0/1,lba=4209030
+
+TestDisk exited normally.

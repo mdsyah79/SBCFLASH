@@ -1,0 +1,14 @@
+Begin3
+Title:          DOS Navigator 2
+Version:        2.14 beta
+Entered-date:   2012-09-25
+Description:    DOS Navigator 2 OpenSource is a file manager based on DOS Navigator (c) 1991-99 by RIT Research Labs.
+Keywords:       dos navigator, norton commander
+Author:         DOS Navigator developers
+Maintained-by:  -
+Primary-site:   http://ibiblio.org/pub/micro/pc-stuff/freedos/files/distributions/1.2/repos/pkg-html/dn2.html
+Alternate-site: -
+Original-site:  -
+Platforms:      DOS
+Copying-policy: OpenSource, similar to BSD License
+End

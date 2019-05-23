@@ -1,0 +1,48 @@
+paths: Cannot open file 'C:\DILLO/CONFIG/dillorc'
+paths: Cannot open file '/etc/dillo/dillorc'
+paths: Using internal defaults...
+paths: Cannot open file 'C:\DILLO/CONFIG/keysrc'
+paths: Cannot open file '/etc/dillo/keysrc'
+paths: Using internal defaults...
+OpenSSL: Insufficient random entropy
+dillo_dns_init: Here we go! (not threaded)
+Enabling cookies as from cookiesrc...
+XOpenIM() failed
+TCP/IP shutdown: Segmentation violation
+Exiting due to signal SIGABRT
+Page fault at eip=004868c0, error=0006
+eax=0000000f ebx=0058d030 ecx=0000000f edx=00000000 esi=00000000 edi=00000000
+ebp=0058d008 esp=0058cffc program=C:\DILLO\BIN\DILLO.EXE
+cs: sel=00e7  base=100b0000  limit=0087ffff
+ds: sel=00ef  base=100b0000  limit=0087ffff
+es: sel=00ef  base=100b0000  limit=0087ffff
+fs: sel=00ff  base=00000000  limit=0010ffff
+gs: sel=00ff  base=00000000  limit=0010ffff
+ss: sel=00ef  base=100b0000  limit=0087ffff
+App stack: [0058ffa0..0050ffa4]  Exceptn stack: [0050f190..0050d250]
+
+Call frame traceback EIPs:
+  0x004868c0
+  0x000a69ef
+  0x0010207e
+  0x0010376f
+  0x000dfbff
+  0x000e065f
+  0x00099066
+  0x004a1b13
+  0x000a20ef
+  0x00091f9b
+  0x00092aab
+  0x0008f844
+  0x0008f8a3
+  0x0008f93d
+  0x0009364c
+  0x0009369e
+  0x000a9787
+  0x0001a9ad
+  0x0000f1f9
+  0x00036d6d
+  0x0009354b
+  0x000936cb
+  0x00002936
+  0x0047af0f

@@ -1,0 +1,104 @@
+
+Source:C.MIN
+
+
+Name:Cfilename
+	   Original: the MINT EMACS C mode by Johnathan Vail
+	   GNU Emacs like C mode by Hiroshi Onishi
+
+
+	The code here is to be given freely to all Freemacs users. This C
+mode provides the following features:
+
+	o  Automatic left-curly-matching and proper indenting for the
+		right brace.
+
+	o  "Intelligent" auto-indenting (follow indenting level of current
+		open left brace plus one of few parameters).
+
+	o  Selectable {tab,indent,...} size with the variable c-*.
+
+	o  A new level command for opening new levels of code.
+
+KEYS in C mode:
+
+	Return -- Return will open a new line and if auto-indent is on it
+		will indent the proper amount for the current level.
+		If breaking a line it will indent a little more.
+
+	  Tab  -- If at the end of a line Tab inserts a <TAB> (^I).
+		Otherwise the line is re-indented to the proper amount.
+
+	   }   -- If on a line of code this simply shows the matching
+		open {.  Otherwise it will indent itself to the proper
+		depth and show the matching open {.
+
+	  M-{  -- This open a new level by inserting both a { and a } and
+		opening a line in between, indented to the proper amount.
+
+OPERATION:
+
+	When a .c or .h file is visited C mode is invoked.  Otherwise it
+can be entered by M-X C-mode.  A new function, Fun-mode will set
+Fun)damental as the major mode (I changed my Fundamental to Fun).  My
+default is to use a <TAB> to denote a new level.  If you do not like this
+then you can change the variable #(Ctabs) to be whatever whitespace you
+like.  Notice also that if you override the indenting that the subsequent
+indenting will follow.  Also notice that it doesn't matter where on the
+line the { is.  Anyway, SHARE and ENJOY.
+
+			Johnathan Vail, N1DXG
+			Data General, Durham NH (603) 862-6562
+			vail_j@dur08.ceo.dg.com
+[*]
+
+
+Name:C:C-newlevel
+This will open a new level of C code braces.
+[*]
+
+
+Name:C:Clbrace
+If we are putting our { on a line of code the just flash it.
+[*]
+
+
+Name:C:Cnewline-and-indent
+C mode newline with auto indent, current indent level, and if breaking a line
+then indent it a little more.
+[*]
+
+
+Name:C:Crbrace
+If we are putting our } on a line of code the just flash it, otherwise match
+the indenting of the open { and then flash it.
+[*]
+
+
+Name:C:Ctab
+This will indent the C line to the appropriate amount or insert #(Ctabs) if EOL
+[*]
+
+
+Name:Ccurrent-indent
+Return the indenting of the previous open {.
+[*]
+
+
+Name:Cget-indent
+Return the indenting of the current line.
+[*]
+
+
+Name:Cnext-indent
+Make next indent
+[*]
+
+
+Name:Ctabs
+A function that returns the indentation string.
+[*]
+
+
+
+Source:C.MIN

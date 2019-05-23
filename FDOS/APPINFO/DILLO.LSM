@@ -1,0 +1,14 @@
+Begin3
+Title:          Dillo
+Version:        3.0p9
+Entered-date:   2012-09-25
+Description:    A graphical web browser known for its speed and small footprint.
+Keywords:       dillo, web, www, browser
+Author:         Dillo developers
+Maintained-by:  -
+Primary-site:   http://ibiblio.org/pub/micro/pc-stuff/freedos/files/distributions/1.2/repos/pkg-html/dillo.html
+Alternate-site: -
+Original-site:  -
+Platforms:      DOS
+Copying-policy: GNU General Public License, Version 3
+End

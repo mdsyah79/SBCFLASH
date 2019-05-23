@@ -1,0 +1,31 @@
+
+Source:RMAIL.MIN
+Name:R:mail
+Create the mail buffer.  Use arg1 as the To: field and arg2 as the Subject: field.
+[*]
+
+
+Name:R:mail-send
+Send the mail and bury the buffer.
+Bugs:
+	Needs to quote "\n.\n".
+[*]
+
+
+Name:Rmail-send
+Called with arg1 = user to mail it to.
+[*]
+
+
+Name:RFC822-date
+#(RFC822-date) should be something like (Sat, 12 Nov 88 19:49:57 EST)
+[*]
+
+
+Name:RFC822-date-do
+Sat,Nov,12,19:41:04,1988
+[*]
+
+
+
+Source:RMAIL.MIN

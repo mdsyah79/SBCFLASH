@@ -1,0 +1,16 @@
+#!ipxe
+
+# Give user a chance to enter the shell
+prompt --key 0x02 --timeout 5000 Press Ctrl-B for the iPXE shell... || goto no_shell
+shell
+exit
+
+:no_shell
+
+:retry_dhcp
+dhcp cell05 || goto retry_dhcp
+
+:retry_grab
+kernel pxelinux.0 || goto retry_grab
+
+boot pxelinux.0

@@ -1,0 +1,14 @@
+Begin3
+Title:          GNU sed
+Version:        4.2.2
+Entered-date:   2016-07-10
+Description:    GNU sed is the GNU implementation of the POSIX stream editor `sed'.
+Keywords:       sed
+Author:
+Maintained-by:  Jim Meyering <jim _at_ meyering.net>, and Assaf Gordon <assafgordon _at_ gmail.com>
+Primary-site:
+Alternate-site:
+Original-site:  http://www.gnu.org/software/sed
+Platforms:      DOS, FreeDOS
+Copying-policy: GNU General Public License, Version 3
+End

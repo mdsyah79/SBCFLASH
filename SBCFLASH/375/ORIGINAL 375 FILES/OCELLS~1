@@ -1,0 +1,67 @@
+
+; Cell Persistent Data INI   Sample
+; ========================
+[Identity]
+MDWID=2143
+
+; Note, all values are doubles
+
+[ClockChannel]
+;AGCCapGainCompensation=1.0				; Default is 1.0
+
+[DataChannel]
+;AGCCapGainCompensation=1.0				; Default is 1.0
+
+[HDA_Transport]
+TransportInDeltaCoeffs=0.0,0.0,0.0,0.0,0.0,0.0,0.0
+TransportOutDeltaCoeffs=0.0,0.0,0.0,0.0,0.0,0.0,0.0
+TransportPPInDeltaCoeffs=0.0,0.0,0.0,0.0,0.0,0.0,0.0
+TransportPPOutDeltaCoeffs=0.0,0.0,0.0,0.0,0.0,0.0,0.0
+TransportClampDeltaCoeffs=0.0,0.0,0.0,0.0,0.0,0.0,0.0
+TransportUnclampDeltaCoeffs=0.0,0.0,0.0,0.0,0.0,0.0,0.0
+
+[ClockHeadPositioner]
+ClockHeadInsertDeltaCoeffs=0.0,0.0,0.0,0.0,0.0
+ClockHeadRetractDeltaCoeffs=0.0,0.0,0.0,0.0,0.0
+ClockHeadLowerDeltaCoeffs=0.0,0.0,0.0,0.0
+ClockHeadRaiseDeltaCoeffs=0.0
+
+[LockPushpin]
+DeltaB1Kx0=0.0
+DeltaB1Kx1=0.0
+DeltaB1Kx2=0.0
+DeltaB1Ky1=0.0
+DeltaB1Ky2=0.0
+DeltaIIRg=0.0
+DeltaB2Kx1=0.0
+DeltaB2Kx2=0.0
+DeltaB2Ky1=0.0
+DeltaB2Ky2=0.0
+
+[Positioner]
+CalibratedDeltaTwist=0.0
+;PastODOptoValue=-4.5   ;2136  5/11/02
+;PastODOptoValue=-4.500001   ;NTC00110  11/18/02
+;PastODOptoValue=-5.209001   ;C2 SWA003033  11/19/02 1100HRS -0.709
+;PastODOptoValue=-5.388501    ;C2 NTC001007  11/20/02 1000HRS
+;PastODOptoValue=-5.297406    ;C2 ATC001002  11/23/02 1851HRS   0.091095
+;PastODOptoValue=-5.178735    ;C2 ATC001002  11/24/02 0915HRS  +0.265475
+;PastODOptoValue=-5.154933     ;C2 NTC001066  11/24/02 1210HRS  +0.023802
+;PastODOptoValue=-5.246433     ;C2 BWA001010  11/24/02 2140HRS   -0.0915  NEW OD REF DSK
+;PastODOptoValue=-5.271434     ;C2 NTC001074  11/25/02 0200HRS   -0.025001  NEW OD REF DSK
+PastODOptoValue=-5.329434     ;C2 ATC001002  11/25/02 0650HRS   -0.058  NEW OD REF DSK
+
+; This section can be used for pressure differences between TOOLS.
+; Float gives most problems.
+; NOTE: There are two cases of Float - when Actuator is IN and when its OUT
+[Pressures]
+FloatLowIn=90
+FloatHighIn=120;
+FloatLowOut=50	;	46;
+FloatHighOut=53	;48;;
+
+[HSASTACK]
+HSASN="ATC001002-000000"
+
+[HSASTACKTD]
+TIMEDATE="11-25-2002/06:50:00"

@@ -1,0 +1,55 @@
+
+Source:ABBREV.MIN
+
+
+
+Name:A-abbrev-all-caps
+Does nothing (yet).
+[*]
+
+
+Name:A-save-abbrev
+If non-empty, offer to save abbreviations if any have been added or deleted.
+[*]
+
+
+Name:A:abbrev-mode
+Turns on/off auto-abbreviation (when a space is typed) in the current
+buffer.  The abbrev library is loaded if required
+[*]
+
+
+
+Name:A:expand-abbrev
+Expands the abbreviation that occurs before the point by looking
+for a string named abbrev.Mode.<abbreviation>, or else abbrev..<abbreviation>.
+[*]
+
+
+Name:A:read-abbrev-file
+Read a file describing all defined abbrevs.
+[*]
+
+
+Name:A:write-abbrev-file
+Write a file describing all defined abbrevs.
+[*]
+
+
+Name:Adefine-abbrev
+Defines an abbreviation for the string before the point.  This is extremely
+simple, and uses up Mint string space for the abbreviations.  For my uses
+these sorts of abbreviations are far superior to the "dabbrev" ones that are
+also around --- but I do tend to produce some fairly obscure documents!
+Arg1 is the mode to define the abbrev in (if any).
+[*]
+
+
+Name:Ainverse-define-abbrev
+Defines an expansion for the string before the point.
+Arg1 is the mode to define the abbrev in (if any).
+[*]
+
+
+
+Source:ABBREV.MIN

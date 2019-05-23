@@ -1,0 +1,258 @@
+@echo off
+SET CFNOFMT=
+SET CFNOPART=
+SET CFCHKFAIL=
+SET CFWRGPART=
+
+
+:start
+SET PATH=;
+SET PATH=%dosdir%\BIN
+cls
+echo.
+echo               MDW Repair Lab                          Ver 1.1
+echo               ***********************************************
+echo               *                                             *
+echo               *  Press  1 = To flash SBC with ver 3.66      *
+echo               *                                             *
+echo               *  Press  2 = To flash SBC with ver 3.75      *
+echo               *                                             *
+echo               *  Press  3 = To transfer 1GB to 4GB CF mode  *
+echo               *                                             *
+echo               *  Press  4 = To exit flash mode              *
+echo               *                                             *
+echo               ***********************************************
+echo.
+echo.
+Choice /C:1234 /N /S "Choose Your Option (1,2,3 or 4)?"%1
+IF ERRORLEVEL ==4 GOTO FOUR
+IF ERRORLEVEL ==3 GOTO THREE
+IF ERRORLEVEL ==2 GOTO TWO
+IF ERRORLEVEL ==1 GOTO ONE
+echo.
+echo.
+pause
+echo.
+goto start
+
+:ONE
+SET PATH=%path%;C:\SBCFLASH\366
+cls
+echo            **************************************************
+echo            ***     Proceed to flash SBC Version 3.66      ***
+echo            ************************************************** 
+echo.
+echo            Press  1 = Backup compact flash info & format
+echo.
+echo            Press  2 = Retore back cellserv.ini/dat info
+echo.
+echo            Press  3 = To change cellserv ini/dat in Compact Flash
+echo.
+echo            Press  4 = load default (Tester1) ini/dat info into CF 
+echo.
+echo            Press  5 = Return to main manu 
+echo.
+Choice /C:12345 /N /S "Choose Your Option (1,2,3,4 or 5)?"%1
+IF ERRORLEVEL ==5 GOTO start
+IF ERRORLEVEL ==4 GOTO OFOUR
+IF ERRORLEVEL ==3 GOTO OTHREE
+IF ERRORLEVEL ==2 GOTO OTWO
+IF ERRORLEVEL ==1 GOTO OONE
+
+:OONE
+cls
+echo.
+REM CHDIR \366
+CALL 1.BAT
+REM CD\
+echo.
+echo.
+echo.
+echo Done.....
+rem CALL WAIT.BAT
+GOTO ONE
+
+:OTWO
+cls
+echo.
+REM CHDIR \366
+CALL 2.BAT
+REM CD\
+REM CALL WAIT.BAT 1
+GOTO ONE
+
+:OTHREE
+CLS
+ECHO.
+REM CHDIR \366
+CALL 3.BAT
+REM CD\
+rem CALL WAIT.BAT
+GOTO ONE
+
+:OFOUR
+CLS
+ECHO.
+REM CHDIR \366
+CALL 4.BAT
+REM CD\
+REM CALL WAIT.BAT 3
+GOTO ONE
+
+:TWO
+SET PATH=%path%;C:\SBCFLASH\375
+cls
+echo            ##################################################
+echo            ###      Proceed to flash SBC Version 3.75     ###
+echo            ################################################## 
+echo.
+echo            Press  1 = Backup orginal cellserv.ini & format
+echo.
+echo            Press  2 = Retore back cellserv.ini/dat info
+echo.
+echo            Press  3 = To change cellserv ini/dat in Compact Flash
+echo.
+echo            Press  4 = load default (Tester1) ini/dat info into CF 
+echo.
+echo            Press  5 = Return to main manu 
+echo.
+choice /C:12345 /N /S "Choose Your Option (1,2,3,4 or 5)?"%1
+IF ERRORLEVEL == 5 GOTO start
+IF ERRORLEVEL == 4 GOTO TFOUR
+IF ERRORLEVEL == 3 GOTO TTHREE
+IF ERRORLEVEL == 2 GOTO TTWO
+IF ERRORLEVEL == 1 GOTO TONE
+
+:TONE
+cls
+echo.
+CALL 1.BAT
+echo.
+echo.
+echo.
+echo Done.....
+GOTO TWO
+
+:TTWO
+cls
+echo.
+CALL 2.BAT
+GOTO TWO
+
+:TTHREE
+CLS
+ECHO.
+CALL 3.BAT
+GOTO TWO
+
+:TFOUR
+CLS
+ECHO.
+CALL 4.BAT
+GOTO TWO
+
+:THREE
+verrlvl 0
+SET PATH=%path%;C:\SBCFLASH\4CONV1
+VFDUTIL /C /F %0
+cls
+echo            **************************************************
+echo            ***        TRANSFER 1GB TO 4GB CF MODE         ***
+echo            ************************************************** 
+echo.
+echo            Press  1 = Backup 1GB CF info and Remove 1GB CF
+echo.
+echo            Press  2 = Insert 4GB CF FORMAT TO USABLE FORMAT
+echo.
+echo            Press  3 = Restore back cellserv.ini/dat info
+echo.
+echo            Press  4 = To change cellserv ini/dat in Compact Flash
+echo.
+echo            Press  5 = Load default (Tester1) ini/dat info into CF 
+echo.
+echo            Press  6 = Return to main menu
+echo.
+Choice /C:123456 /N /S "Choose Your Option (1,2,3,4,5 or 6)?"%1
+IF ERRORLEVEL ==6 GOTO start
+IF ERRORLEVEL ==5 GOTO FDFIVE
+IF ERRORLEVEL ==4 GOTO FDFOUR
+IF ERRORLEVEL ==3 GOTO FDTHREE
+IF ERRORLEVEL ==2 GOTO FDTWO
+IF ERRORLEVEL ==1 GOTO FDONE
+
+:FDONE
+cls
+echo.
+echo Begin of 1GB CF card data file backup.
+CALL FDCHKCF.BAT
+CALL FDCKVAL.BAT
+if errorlevel 1 goto THREE
+CALL FDBACKUP.BAT
+if errorlevel 1 goto THREE
+cls
+GOTO THREE
+
+:FDTWO
+cls
+echo.
+echo Begin of 4GB CF card processing.
+CALL FDCHKCF.BAT
+CALL FDCHKFAIL.BAT
+if errorlevel 1 goto THREE
+CALL FDPART.BAT
+CALL FDFORMAT.BAT
+CLS
+GOTO THREE
+
+:FDTHREE
+CLS
+ECHO.
+CHDIR \FDOS12
+CALL FDRESTOR.BAT
+CD\
+rem CALL WAIT.BAT
+GOTO THREE
+
+:FDFOUR
+CLS
+ECHO.
+CHDIR \FDOS12
+CALL FDEDIT.BAT
+CD\
+CALL WAIT.BAT
+GOTO THREE
+
+:FDFIVE
+CLS
+ECHO.
+CHDIR \FDOS12
+CALL FDDEFAUL.BAT
+CD\
+CALL WAIT.BAT
+GOTO THREE   
+             
+
+:FOUR
+cls
+echo.
+echo.
+echo.
+echo      Important : To set IRQ resources
+echo                @ CMOS setup page_PnP/PCI configuratios
+echo                  IRQ Resources_Resources controlled by [Manual]
+echo                  IRQ Resources [5,10,12,14] assigned to [Reserved]
+echo.
+echo      If you are transferring 1GB to 4GB CF, please do the following:
+echo       1) POWER-OFF
+echo       2) REMOVE 1GB cf and INSERT 4GB cf
+echo       3) TURN-ON SBC flashing station
+echo       4) Select (3) from MAIN MENU and (2) from TRANSFER 1GB to 4GB menu...
+echo.    
+echo         ...else...
+echo.
+echo                  Please switch off power,unplug Inno disk
+echo                           from SBC card.
+echo.
+echo                                         Have a nice day ! 
+echo.
+echo.

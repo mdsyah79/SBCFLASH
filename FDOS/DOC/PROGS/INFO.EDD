@@ -1,0 +1,101 @@
+
+Source:INFO.MIN
+
+
+Name:Ifilename
+The string 'info-history' consists of comma delimited strings
+[*]
+
+
+Name:I:Info-follow
+line is a comment.  After the starting line, every line that begins
+with a "* " lists a single topic.  The name of the topic--the arg
+that the user must give to the "m" command to select this topic--
+comes right after the star and space, and is followed by 
+a colon, spaces and tabs, and the name of the node which discusses
+that topic.  The node name, like node names following Next,
+Previous and Up, may be terminated with a tab, comma, or newline;
+it may also be terminated with a period.
+[*]
+
+
+Name:I:Info-last
+Go back to the node that we visited most recently.
+[*]
+
+
+Name:I:Info-menu
+A menu begins with "* Menu:".  The prompt is "Menu item: ".
+line is a comment.  After the starting line, every line that begins
+with a "* " lists a single topic.  The name of the topic--the arg
+that the user must give to the "m" command to select this topic--
+comes right after the star and space, and is followed by 
+a colon, spaces and tabs, and the name of the node which discusses
+that topic.  The node name, like node names following Next,
+Previous and Up, may be terminated with a tab, comma, or newline;
+it may also be terminated with a period.
+[*]
+
+
+Name:I:Info-mode
+Set up local key maps for Info Mode.
+[*]
+
+
+Name:I:Info-quit
+Exit Info by simply returning to the buffer we entered from.
+[*]
+
+
+Name:I:Info-validate
+Ensure that every node is reachable and valid.
+[*]
+
+
+Name:Ifind-node
+Copy a node to the *info* buffer.  All .eli files are assumed to be
+on the path given by the EMACS environment variable.
+[*]
+
+
+Name:Ifind-node-do
+Search through all the nodes to find the one that matches our name.  Return
+arg2 if we find a match, and arg3 if we don't.
+[*]
+
+
+Name:Ifind-tag
+Arg1 is the name of the tag whose entry is to be found.
+[*]
+
+
+Name:Iget-item
+Given the name of an item in arg2, return the name of the node.
+The item prefix is in arg1.
+* foo:   bar
+  0  1   2
+[*]
+
+
+Name:Ilist-items
+Return a comma-delimited list of those item names that begin with arg3.
+The item prefix is in arg2.  The initial point is set by arg1.
+[*]
+
+
+Name:Ilist-items-do
+Continue searching until all items have been found.
+[*]
+
+
+Name:Ilist-nodes
+Make a comma-delimited list of node names.
+[*]
+
+
+Name:Info-cmd
+This is used to define the string #(d), which executes keys.
+[*]
+
+
+Source:INFO.MIN

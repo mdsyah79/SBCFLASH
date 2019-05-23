@@ -1,0 +1,16 @@
+Begin3
+Title:          V8Power Tools
+Version:        19.01.17
+Entered-date:   2019-01-17
+Description:    a set of batch file enhancement utilities for DOS that can provide text UI and other processing functions
+Keywords:       dos 16 bit batch vask vchoice vecho vpause vframe vmath vline vprogres
+Changes:        New utility VFONT to load temporary text mode fonts.
+Author:         Jerome Shidel <jerome _AT_ shidel.net>
+Maintained-by:  Jerome Shidel <jerome _AT_ shidel.net>
+Primary-site:   https://github.com/LoopZ/V8Power
+Alternate-site: http://www.ibiblio.org/pub/micro/pc-stuff/freedos/files/utils/v8power/
+Original-site:  http://up.lod.bz/V8Power/
+Platforms:      DOS
+Copying-policy: GNU General Public License, Version 2
+Modified-date: 2019-01-17.0
+end

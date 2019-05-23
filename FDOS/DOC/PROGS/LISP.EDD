@@ -1,0 +1,71 @@
+
+Source:LISP.MIN
+Name:L:backward-sexp
+Move to the beginning of the current s-expression
+[*]
+
+
+Name:L:forward-sexp
+Move to the end of the current s-expression
+[*]
+
+
+Name:L:kill-sexp
+Kill from the point to the end of the current s-expression
+[*]
+
+
+Name:L:lisp-indent
+Indent the current line per LISP indentation rules
+[*]
+
+
+Name:L:lisp-newline-and-indent
+Newline and indent per LISP indentation rules
+[*]
+
+
+Name:L:mark-sexp
+Set the mark at the end of the current s-expression and flash it
+[*]
+
+
+Name:L:transpose-sexp
+Transpose the current s-expression with the one previous to it.
+USE ONLY WITH POINT AT START OF SEXP. comments (may) get confused
+[*]
+
+
+Name:Lbackward-skip-lisp-nonwhite
+Reverses until it hits a space, open-paren; 
+Stops with point to right of space or open-paren
+[*]
+
+
+Name:Lbackward-skip-lisp-string
+Scans backward past everything looking for a non-escaped " and stops on it
+[*]
+
+
+Name:Lbackward-skip-lisp-white
+Skips over lisp whitespace, including commented lines 
+[*]
+
+
+Name:Lforward-skip-lisp-nonwhite
+Scans past all non-whitespace except close-paren
+[*]
+
+
+Name:Lforward-skip-lisp-string
+Scans past everything looking for a non-escaped " and stops after it
+[*]
+
+
+Name:Lforward-skip-lisp-white
+Scans forward past all whitespace and lisp comments
+[*]
+
+
+
+Source:LISP.MIN

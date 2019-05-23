@@ -1,0 +1,17 @@
+#!ipxe
+
+# Give user a chance to enter the shell
+prompt --key 0x02 --timeout 5000 Press Ctrl-B for the iPXE shell... || goto no_shell
+shell
+exit
+
+:no_shell
+
+:retry_dhcp
+dhcp cell1 || goto retry_dhcp
+# Please ensure above cellX, X is your tester number you are flashing.
+
+:retry_grab
+kernel pxelinux.0 || goto retry_grab
+
+boot pxelinux.0
