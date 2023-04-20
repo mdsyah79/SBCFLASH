@@ -3,6 +3,8 @@ Project SBCFLASH v2 is a flashing tool of existing CF cards used in SBC (Single 
 Project SBCFLASH is a refresh of the ORIGINAL flashing station which runs on Legacy MSDOS. Refresh meaning Legacy MSDOS is replaced by the more powerful and modular
 design of DOS alternative called: FreeDOS. Through FreeDOS, advanced ops can be done to newer version of flashing for newer machines. This saves time, money and most of all, wastes borne out of human-errors.
 
+Check out SBCFLASH v2 in action: https://youtu.be/sCDWElt6-zI
+
 ![image](https://user-images.githubusercontent.com/18409384/233259957-c7bb8fae-c204-471e-b17b-ca80671b3915.png)
 
 
