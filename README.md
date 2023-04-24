@@ -14,7 +14,7 @@ Existing solutions of advanced CF card flashing (for newer machine) consists of 
   3- File corruption due to software issues
   4- Wrong flashing file (human error)
   
-Please take note that Syslinux is used to created the bootable media and FREEDOS has the capabilities to integrate GREP, SED and DOSFSCK (UNIX) commands into DOS, hence providing powerful line by line searching and deletion/addition of unwanted lines of codes in the CF cards.
+Please take note that Syslinux is used to created the bootable media and FREEDOS has the capabilities to integrate GREP and SED UNIX commands into DOS, hence providing powerful line by line searching and deletion/addition of unwanted lines of codes in the CF cards. And UNIX style FSCK function called: DOSFSCK to repair the CF card inode and metadata or any irregularities with the CF card memory structure so that the CF card can perform reliably and efficiently.
 
 ![image](https://user-images.githubusercontent.com/18409384/233261393-e6ea67c8-7231-48c3-9876-ff4d26090991.png)
 
